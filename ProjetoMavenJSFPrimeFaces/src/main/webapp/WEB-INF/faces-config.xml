@@ -11,6 +11,7 @@
 			<supported-locale>pt</supported-locale>
 			<supported-locale>en</supported-locale>
 			<supported-locale>es</supported-locale>
+			<supported-locale>dt</supported-locale>
 	   </locale-config>
 		
 	   <resource-bundle>
