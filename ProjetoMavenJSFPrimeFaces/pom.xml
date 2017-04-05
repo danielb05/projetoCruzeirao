@@ -29,11 +29,17 @@
   </dependency>
   
   <dependency>
-	<groupId>org.primefaces</groupId>
+	<groupId>org.primefaces.themes</groupId>
 	<artifactId>primefaces</artifactId>
 	<version>6.0</version>
 	<scope>compile</scope>
 </dependency>
+	<!--<dependency>
+		<groupId>org.primefaces.themes</groupId>
+		<artifactId>UI-Lightness</artifactId>
+		<version>6.0</version>
+		<scope>compile</scope>
+	</dependency>-->
   </dependencies>
 </project>
 
