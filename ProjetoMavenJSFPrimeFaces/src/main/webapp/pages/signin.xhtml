@@ -20,11 +20,11 @@
 	  <h:form>	
 		  <p:panelGrid columns="2" align="center">
 		      <p:outputLabel value="#{msg['pages.signin.email']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}" type="email"/>
 			  <p:outputLabel value="#{msg['pages.signin.senha']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:inputText value="#{alunoManagedBean.aluno.nome}" type="password"/>
 		      <p:outputLabel value="#{msg['pages.signin.repetirSenha']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}" type="password"/>
 			  <p:outputLabel value="#{msg['pages.signin.nome']}" />
 		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
 		      <p:outputLabel value="#{msg['pages.signin.dataNasc']}" />

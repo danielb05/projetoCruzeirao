@@ -1,0 +1,48 @@
+
+<ui:composition template="templateMenu2.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.aceite.tituloOrg']}" />
+	</ui:define>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.aceite.messageOrg']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="#{msg['pages.aceite.tituloOrg']}"/></h1>
+	  
+	  <h:form>	
+		     <p:dataTable value="#{alunoManagedBean.alunos}"
+                var="aux"
+                id="tabelaAluno">
+   >
+			      <p:column headerText="#{msg['pages.aceite.nome']}">
+			        <p:outputLabel value="#{aux.matricula}" />
+			      </p:column>
+			      <p:column headerText="#{msg['pages.aceite.aceitar']}">
+					<p:commandButton value="#{msg['pages.aceite.aceitar']}" action="#" color="green"/>
+				</p:column>
+			    <p:column headerText="#{msg['pages.aceite.negar']}">
+					<p:commandButton value="#{msg['pages.aceite.negar']}" action="#" color = "red"/>
+				</p:column>			      
+			   </p:dataTable>	
+	  
+       </h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+
