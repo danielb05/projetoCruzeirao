@@ -7,29 +7,29 @@
     <p:growl id="messages"/>
  
     <p:menubar>
-        <p:submenu label="Campeonatos">
-            <p:submenu label="Cadastrar">
-                <p:menuitem value="Todos" url="#" />
+        <p:submenu label="#{msg['pages.comuns.menuTopo.campeonatos']}">
+            <p:submenu label="#{msg['pages.comuns.menuTopo.cadastrarCamp']}">
+                <p:menuitem value="#{msg['pages.comuns.menuTopo.todos']}" url="#" />
             </p:submenu>
-            <p:menuitem value="Cadastrar" url="#" />
-            <p:menuitem value="Todos" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.cadastrarCamp']}" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.todos']}" url="#" />
             <p:separator />
-            <p:menuitem value="Sair" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.sair']}" url="#" />
         </p:submenu>
  
-        <p:submenu label="Times">
-            <p:menuitem value="Cadastrar" url="#" />
-            <p:menuitem value="Meus Times" url="#" />
+        <p:submenu label="#{msg['pages.comuns.menuTopo.times']}">
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.meusTimes']}" url="#" />
         </p:submenu>
  
-        <p:submenu label="Ajuda">
-            <p:menuitem value="Sobre o Cruzeirao" url="#" />
-            <p:menuitem value="Suporte" url="#" />
+        <p:submenu label="#{msg['pages.comuns.menuTopo.ajuda']}">
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.sobre']}" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.suporte']}" url="#" />
             
         </p:submenu>
  
         <f:facet name="options">
-            <p:commandButton type="button" value="Sair" icon="ui-icon-extlink" />
+            <p:commandButton type="button" value="#{msg['pages.comuns.menuTopo.sair']}" icon="ui-icon-extlink" />
         </f:facet>
     </p:menubar>
 </h:form>
