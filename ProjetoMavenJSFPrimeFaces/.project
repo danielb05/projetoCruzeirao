@@ -39,11 +39,4 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/main/webapp/resources/sistema/1_0/imagens/cruzeiraologo2.png</name>
-			<type>1</type>
-			<location>C:/Users/Rodolfo/Downloads/cruzeiraologo2.png</location>
-		</link>
-	</linkedResources>
 </projectDescription>

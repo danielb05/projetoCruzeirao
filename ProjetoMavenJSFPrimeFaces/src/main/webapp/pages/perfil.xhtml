@@ -1,0 +1,46 @@
+
+<ui:composition template="templateMenu2.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.perfil.title']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="My Profile"/></h1>
+	  
+	  <h:form>	
+		  <p:panelGrid columns="2" align="center">
+		      <p:outputLabel value="#{msg['pages.signin.email']}" />
+		      <p:outputLabel value="#{aux.matricula}" />
+			  <p:outputLabel value="#{msg['pages.signin.nome']}" />
+		      <p:outputLabel value="#{aux.matricula}" />
+		      <p:outputLabel value="#{msg['pages.perfil.tipo']}" />
+		      <p:outputLabel value="#{aux.matricula}" />
+		      <p:outputLabel value="#{msg['pages.signin.dataNasc']}" />
+		      <p:outputLabel value="#{aux.matricula}" />
+			  <p:outputLabel value="#{msg['pages.signin.sexo']}" />
+		      <p:outputLabel value="#{aux.matricula}" />
+		      <p:outputLabel value="#{msg['pages.signin.docTipo']}" />
+		      <p:outputLabel value="#{aux.matricula}" />
+		      <p:outputLabel value="#{msg['pages.signin.documento']}" />
+		      <p:outputLabel value="#{aux.matricula}" />
+	  	</p:panelGrid>
+	  <p:commandButton value="#{msg['pages.perfil.editar']}" action="#"/>
+       </h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+
