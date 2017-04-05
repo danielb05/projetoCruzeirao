@@ -1,0 +1,36 @@
+
+<ui:composition template="templateMenu2.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.cadastroAluno.title']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="Login"/></h1>
+	  
+	  <h:form>	
+	  <p:panelGrid columns="2" align="center">
+      <p:outputLabel value="Usuario ou E-mail:" />
+      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+	  <p:outputLabel value="Senha:" />
+      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+	  </p:panelGrid>
+	  <p:commandButton value="Entrar" action="#"/>
+       </h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+

@@ -11,7 +11,9 @@
 	<h:head>
 
 		<style> .ui-datagrid-no-border .ui-datagrid-content { border: none; } 
-
+		#MenuPrincipal{
+		z-index: 4;
+		}
 		</style>
 
 		<title>
@@ -28,8 +30,8 @@
 		<p:layout id="globalLayout" fullPage="true">
 
 
-			<p:layoutUnit id="MenuPrincipal" position="north" size="180">
-				<ui:include src="comuns/menuTopo.xhtml" />
+			<p:layoutUnit position="north" size="230">
+				<ui:include src="comuns/cabecalho.xhtml" />
 			</p:layoutUnit>
 
 
@@ -40,12 +42,12 @@
 
 			<!-- Menu lateral -->
 			<p:layoutUnit position="west"
-				collapsible="true" size="220">
+				collapsible="true" size="250">
 				<!--  <p:layoutUnit position="west"
 				header="#{msg['pages.templateMenu.titleMainMenu']}"
-				collapsible="true" size="220">
+				collapsible="true" size="220">-->
 				
-				<ui:include src="comuns/menuLateral.xhtml" />-->
+				<ui:include src="comuns/menuLateral.xhtml" />
 			</p:layoutUnit>
 
 
