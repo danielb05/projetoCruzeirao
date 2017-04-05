@@ -1,0 +1,45 @@
+
+<ui:composition template="templateMenu2.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.cadastroCampeonato.titulo']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="#{msg['pages.cadastroCampeonato.titulo']}"/></h1>
+	  
+	  <h:form>	
+		  <p:panelGrid columns="2" align="center">
+		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.nome']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.dataIni']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.dataFim']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.inscriIni']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.inscriFim']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.taxa']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.categorias']}" />
+	  	</p:panelGrid>
+	  <p:commandButton value="#{msg['pages.signin.entrar']}" action="#"/>
+       </h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+
