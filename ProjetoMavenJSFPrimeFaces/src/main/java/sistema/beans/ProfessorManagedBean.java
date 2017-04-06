@@ -13,8 +13,12 @@ public class ProfessorManagedBean {
 	
 	private Professor professor = new Professor();
 	private ProfessorService service = new ProfessorService();
+	private String oi;
 	
-	
+	public ProfessorManagedBean(){
+		
+		oi = "YAAAAAY";
+	}
 	public void salvar()
 	{
 		service.salvar(professor);
@@ -33,6 +37,8 @@ public class ProfessorManagedBean {
 	public List<Professor> getProfessores() {
 		return service.getProfessores();
 	}
+	
+	
 
 	
 	
