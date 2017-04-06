@@ -28,11 +28,26 @@
 			  <p:outputLabel value="#{msg['pages.signin.nome']}" />
 		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
 		      <p:outputLabel value="#{msg['pages.signin.dataNasc']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
-			  <p:outputLabel value="#{msg['pages.signin.sexo']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:calendar id="button" value="#{teste.daniel.uhul}" showOn="button" placeholder="#{msg['pages.signin.dataNasc']}" />
+		      
+		      <p:outputLabel value="#{msg['pages.signin.sexo']}" />
+        		<p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:125px">
+	            <f:selectItem itemLabel="#{msg['pages.signin.sexo']}" itemValue="" />
+	            <f:selectItem itemLabel="#{msg['pages.signin.sexo1']}" itemValue="#{msg['pages.signin.sexo1']}" />
+	            <f:selectItem itemLabel="#{msg['pages.signin.sexo2']}" itemValue="#{msg['pages.signin.sexo2']}" />
+			  </p:selectOneMenu>
+		      
+
 		      <p:outputLabel value="#{msg['pages.signin.docTipo']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+        	  <p:selectOneMenu id="console2" value="#{selectOneMenuView.console}" style="width:125px">
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo']}" itemValue="" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo1']}" itemValue="#{msg['pages.signin.docTipo1']}" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo2']}" itemValue="#{msg['pages.signin.docTipo2']}" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo3']}" itemValue="#{msg['pages.signin.docTipo3']}" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo4']}" itemValue="#{msg['pages.signin.docTipo4']}" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo5']}" itemValue="#{msg['pages.signin.docTipo5']}" />
+			  </p:selectOneMenu>
+		      
 		      <p:outputLabel value="#{msg['pages.signin.documento']}" />
 		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
 	  	</p:panelGrid>
