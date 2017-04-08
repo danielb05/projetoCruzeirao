@@ -10,28 +10,25 @@
  
     <p:menubar>
         <p:submenu label="#{msg['pages.comuns.menuTopo.campeonatos']}">
-            <p:submenu label="#{msg['pages.comuns.menuTopo.cadastrarCamp']}">
-                <p:menuitem value="#{msg['pages.comuns.menuTopo.todos']}" url="#" />
-            </p:submenu>
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.cadastrarCamp']}" url="#" />
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.todos']}" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.cadastrarCamp']}" url="cadastroCampeonato.xhtml" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.todos']}" url="campeonatos.xhtml" />
             <p:separator />
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.sair']}" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.sair']}" url="inicio.xhtml" />
         </p:submenu>
  
         <p:submenu label="#{msg['pages.comuns.menuTopo.times']}">
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" url="#" />
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.meusTimes']}" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" url="cadastroTime.xhtml" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.meusTimes']}" url="meusTimes.xhtml" />
         </p:submenu>
  
         <p:submenu label="#{msg['pages.comuns.menuTopo.ajuda']}">
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.sobre']}" url="#" />
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.suporte']}" url="#" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.sobre']}" url="regulamento.xhtml" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.suporte']}" url="suporte.xhtml" />
             
         </p:submenu>
  
         <f:facet name="options">
-            <p:commandButton type="button" value="#{msg['pages.comuns.menuTopo.sair']}" icon="ui-icon-extlink" />
+            <p:commandButton value="#{msg['pages.comuns.menuTopo.entrar']}" id="withIcon"  icon="ui-icon-extlink" url="login.xhtml"/>
         </f:facet>
     </p:menubar>
     <p:panelGrid columns="3">

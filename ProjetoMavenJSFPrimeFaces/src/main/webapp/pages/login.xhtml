@@ -24,7 +24,7 @@
 	  <p:outputLabel value="#{msg['pages.login.senha']}"  />
       <p:inputText value="#{alunoManagedBean.aluno.nome}" type="password"/>
 	  </p:panelGrid>
-	  <p:commandButton value="#{msg['pages.login.entrar']}" action="#"/>
+	  <p:commandButton value="#{msg['pages.login.entrar']}" action="#{alunoManagedBean.fazerLogin}"/>
        </h:form>
 </ui:define>
 </ui:composition>
