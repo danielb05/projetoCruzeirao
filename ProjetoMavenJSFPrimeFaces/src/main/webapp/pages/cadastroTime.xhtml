@@ -1,0 +1,45 @@
+
+<ui:composition template="templateMenu2.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.cadastroTime.title']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="#{msg['pages.cadastroTime.title']}"/></h1>
+	  
+	  <h:form>	
+		  <p:panelGrid columns="2" align="center">
+		      <p:outputLabel value="#{msg['pages.cadastroTime.nome']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      
+		       <p:outputLabel value="#{msg['pages.cadastroTime.cidade']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      
+		      
+		      
+		
+		      		      
+			 
+	  	</p:panelGrid>
+	  	<br></br>
+	  	
+	  <p:commandButton value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" action="timeCadastrado.xhtml"/>
+       </h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+

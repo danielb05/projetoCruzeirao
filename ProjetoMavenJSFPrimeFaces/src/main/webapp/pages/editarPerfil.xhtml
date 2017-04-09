@@ -1,0 +1,64 @@
+
+<ui:composition template="templateMenu2.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.editarPerfil.title']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="#{msg['pages.editarPerfil.title']}"/></h1>
+	  
+	  <h:form>	
+		  <p:panelGrid columns="2" align="center">
+		      <p:outputLabel value="#{msg['pages.signin.email']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}" type="email"/>
+			  <p:outputLabel value="#{msg['pages.signin.senha']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.nome}" type="password"/>
+		      <p:outputLabel value="#{msg['pages.signin.repetirSenha']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.matricula}" type="password"/>
+			  <p:outputLabel value="#{msg['pages.signin.nome']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:outputLabel value="#{msg['pages.signin.dataNasc']}" />
+		      <p:calendar id="button" value="#{teste.daniel.uhul}" showOn="button" placeholder="#{msg['pages.signin.dataNasc']}" />
+		      
+		      <p:outputLabel value="#{msg['pages.signin.sexo']}" />
+        		<p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:125px">
+	            <f:selectItem itemLabel="#{msg['pages.signin.sexo']}" itemValue="" />
+	            <f:selectItem itemLabel="#{msg['pages.signin.sexo1']}" itemValue="#{msg['pages.signin.sexo1']}" />
+	            <f:selectItem itemLabel="#{msg['pages.signin.sexo2']}" itemValue="#{msg['pages.signin.sexo2']}" />
+			  </p:selectOneMenu>
+		      
+
+		      <p:outputLabel value="#{msg['pages.signin.docTipo']}" />
+        	  <p:selectOneMenu id="console2" value="#{selectOneMenuView.console}" style="width:125px">
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo']}" itemValue="" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo1']}" itemValue="#{msg['pages.signin.docTipo1']}" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo2']}" itemValue="#{msg['pages.signin.docTipo2']}" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo3']}" itemValue="#{msg['pages.signin.docTipo3']}" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo4']}" itemValue="#{msg['pages.signin.docTipo4']}" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo5']}" itemValue="#{msg['pages.signin.docTipo5']}" />
+			  </p:selectOneMenu>
+		      
+		      <p:outputLabel value="#{msg['pages.signin.documento']}" />
+		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+	  	</p:panelGrid>
+	  <h:commandButton   action="#"  value="#{msg['pages.editarPerfil.salvar']}"> </h:commandButton>  
+      <button type="button" onclick="javascript:history.back()">#{msg['pages.editarPerfil.descartar']}</button>
+       </h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+
