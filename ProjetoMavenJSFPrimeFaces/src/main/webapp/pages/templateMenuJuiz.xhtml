@@ -40,25 +40,19 @@
 			</p:layoutUnit>-->
 
 
-	
+			<!-- Menu lateral -->
+			<p:layoutUnit position="west"
+				collapsible="true" size="250">
+				<!--  <p:layoutUnit position="west"
+				header="#{msg['pages.templateMenu.titleMainMenu']}"
+				collapsible="true" size="220">-->
+				
+				<ui:include src="comuns/menuLateralJuiz.xhtml" />
+			</p:layoutUnit>
 
 
 			<p:layoutUnit position="center">
 				<ui:insert name="principal" />
-				<p:panelGrid columns="1">
-				<p:graphicImage 
-					    library="sistema" 
-						name="imagens/Regulamento-Cruzeirão 2017-1.png"
-						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
-						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
-						width = "1050" height = "1490"/>
-						<p:graphicImage 
-					    library="sistema" 
-						name="imagens/Regulamento-Cruzeirão 2017-2.png"
-						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
-						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
-						width = "1050" height = "1490"/>
-				</p:panelGrid>
 			</p:layoutUnit>
 		</p:layout>
 

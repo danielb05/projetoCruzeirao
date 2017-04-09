@@ -10,10 +10,8 @@
  
     <p:menubar>
         <p:submenu label="#{msg['pages.comuns.menuTopo.campeonatos']}">
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.cadastrarCamp']}" url="cadastroCampeonato.xhtml" />
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.todos']}" url="campeonatos.xhtml" />
-            <p:separator />
-            <p:menuitem value="#{msg['pages.comuns.menuTopo.sair']}" url="inicio.xhtml" />
+            <p:menuitem value="#{msg['pages.campeonatosAtivos.titulo']}" url="campeonatosAtivos.xhtml" />
+            <p:menuitem value="#{msg['pages.campeonatosTerminados.titulo']}" url="campeonatosTerminados.xhtml" />
         </p:submenu>
  
         <p:submenu label="#{msg['pages.comuns.menuTopo.times']}">
@@ -21,14 +19,16 @@
             <p:menuitem value="#{msg['pages.comuns.menuTopo.meusTimes']}" url="meusTimes.xhtml" />
         </p:submenu>
  
+        
+        <p:menuitem value="#{msg['pages.comuns.menuTopo.perfil']}" url="perfil.xhtml" />
         <p:submenu label="#{msg['pages.comuns.menuTopo.ajuda']}">
             <p:menuitem value="#{msg['pages.comuns.menuTopo.sobre']}" url="regulamento.xhtml" />
             <p:menuitem value="#{msg['pages.comuns.menuTopo.suporte']}" url="suporte.xhtml" />
-            
+            <p:menuitem value="#{msg['pages.linguagem.menu']}" url="linguagem.xhtml" />
         </p:submenu>
- 
+ 		<p:menuitem value="#{msg['pages.comuns.menuTopo.sair']}" url="paginaInicial.xhtml" />
         <f:facet name="options">
-            <p:commandButton value="#{msg['pages.comuns.menuTopo.entrar']}" id="withIcon"  icon="ui-icon-extlink" url="login.xhtml"/>
+            <p:commandButton value="#{msg['pages.comuns.menuTopo.entrar']}" id="withIcon"  icon="ui-icon-extlink" action="login.xhtml"/>
         </f:facet>
     </p:menubar>
     <p:panelGrid columns="3">
@@ -37,19 +37,19 @@
 						name="imagens/cruzeiraoLogo2.jpg"
 						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
 						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
-						width="220" height="100"/>
+						width="300" height="120" />
 	<p:graphicImage 
 					    library="sistema" 
 						name="imagens/prefeitura-sorocaba.png"
 						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
 						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
-						width="220" height="100"/>
+						width="300" height="120"/>
 	<p:graphicImage 
 					    library="sistema" 
 						name="imagens/cruzeiro.png"
 						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
 						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
-						width="220" height="100"/>
+						width="300" height="120" />
 	</p:panelGrid>
 </h:form>
 </ui:composition>

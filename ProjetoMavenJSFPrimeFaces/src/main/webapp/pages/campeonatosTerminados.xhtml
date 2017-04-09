@@ -1,5 +1,5 @@
 
-<ui:composition template="templateMenu2.xhtml"
+<ui:composition template="templateMenuUsuario.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
@@ -9,32 +9,32 @@
 >
 	
 	<ui:define name="title">
-		<h:outputText value="#{msg['pages.campeonatos.titulo']}" />
+		<h:outputText value="#{msg['pages.campeonatosTerminados.titulo']}" />
 	</ui:define>
 	
 
 	<ui:define name="principal">
 	  
-	  <h1><p:outputLabel value="#{msg['pages.campeonatos.titulo']}"/></h1>
+	  <h1><p:outputLabel value="#{msg['pages.campeonatosTerminados.titulo']}"/></h1>
 	  
 	  <h:form>	
 		     <p:dataTable value="#{alunoManagedBean.alunos}"
                 var="aux"
                 id="tabelaAluno">
    >
-			      <p:column headerText="#{msg['pages.campeonatos.nome']}">
+			      <p:column headerText="#{msg['pages.campeonatosAtivos.nome']}">
 			        <p:outputLabel value="#{aux.matricula}" />
 			      </p:column>
-			      <p:column headerText="#{msg['pages.campeonatos.dataIni']}">
+			      <p:column headerText="#{msg['pages.campeonatosAtivos.dataIni']}">
 			        <p:outputLabel value="#{aux.nome}" />
 			      </p:column>
-			      <p:column headerText="#{msg['pages.campeonatos.dataFim']}">
+			      <p:column headerText="#{msg['pages.campeonatosAtivos.dataFim']}">
 			        <p:outputLabel value="#{aux.curso}" />
 			      </p:column>
-			      <p:column headerText="#{msg['pages.campeonatos.organizador']}">
+			      <p:column headerText="#{msg['pages.campeonatosAtivos.organizador']}">
 			        <p:outputLabel value="#{aux.matricula}" />
 			      </p:column>
-			      <p:column headerText="#{msg['pages.campeonatos.selecionar']}">
+			      <p:column headerText="#{msg['pages.campeonatosAtivos.selecionar']}">
 					<p:commandButton value="#{msg['pages.campeonatos.selecionar']}" action="#"/>
 				</p:column>
 			      

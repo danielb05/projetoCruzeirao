@@ -1,5 +1,5 @@
 
-<ui:composition template="templateMenu2.xhtml"
+<ui:composition template="templateMenuUsuario.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
@@ -19,8 +19,8 @@
 	  <p:outputLabel value="#{msg['pages.paginaInicial.texto']}"/>
 	  <h:form>	
 	  <p></p>
-	  <p:commandButton value="#{msg['pages.paginaInicial.entrar']}" action="#"/>
-	  <a href="#"><p:outputLabel value="#{msg['pages.paginaInicial.texto2']}"/></a>
+	  <p:commandButton value="#{msg['pages.paginaInicial.entrar']}" action="login.xhtml"/>
+	  <a href="signin.xhtml"><p:outputLabel value="#{msg['pages.paginaInicial.texto2']}"/></a>
        </h:form>
 </ui:define>
 </ui:composition>
