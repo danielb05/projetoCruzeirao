@@ -39,4 +39,46 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/commons-fileupload-1.3.2.jar</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/commons-fileupload-1.3.2-bin/lib/commons-fileupload-1.3.2.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/primefaces-6.0.jar</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/primefaces-6.0.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/ui-lightness-1.0.10.jar</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/ui-lightness-1.0.10.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/resources/sistema/1_0/imagens/55.png</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/55.png</location>
+		</link>
+		<link>
+			<name>src/main/webapp/resources/sistema/1_0/imagens/cruzp2.png</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/cruzp2.png</location>
+		</link>
+		<link>
+			<name>src/main/webapp/resources/sistema/1_0/imagens/cruzp3.png</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/cruzp3.png</location>
+		</link>
+		<link>
+			<name>src/main/webapp/resources/sistema/1_0/imagens/cruzp4.png</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/cruzp4.png</location>
+		</link>
+		<link>
+			<name>src/main/webapp/resources/sistema/1_0/imagens/teste.png</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/teste.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>
