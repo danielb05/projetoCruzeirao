@@ -76,6 +76,11 @@
 			<location>C:/Users/Maari/Desktop/cruzp4.png</location>
 		</link>
 		<link>
+			<name>src/main/webapp/resources/sistema/1_0/imagens/prefeitura.png</name>
+			<type>1</type>
+			<location>C:/Users/Maari/Desktop/prefeitura.png</location>
+		</link>
+		<link>
 			<name>src/main/webapp/resources/sistema/1_0/imagens/teste.png</name>
 			<type>1</type>
 			<location>C:/Users/Maari/Desktop/teste.png</location>
