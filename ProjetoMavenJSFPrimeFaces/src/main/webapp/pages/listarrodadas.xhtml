@@ -1,0 +1,155 @@
+
+<ui:composition template="templateMenuOrg.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.rodada.title']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="#{msg['pages.rodada.title']}"/></h1>
+	  
+	  <h:form>	
+	  
+<p:panelGrid style="margin-top:20px">
+    <f:facet name="header">
+        <p:row>
+            <p:column colspan="9">Round 1</p:column>
+        </p:row>
+        
+        <p:row>
+            <p:column colspan="1">Date</p:column>
+            <p:column colspan="1">Place</p:column>
+            <p:column colspan="1">Time</p:column>
+            <p:column>Team 1</p:column>
+            <p:column>X</p:column>
+            <p:column>Team 2</p:column>
+            <p:column>Group</p:column>
+        </p:row>
+ 
+    </f:facet>
+    
+    
+     <p:row>
+        <p:column style="font-weight: bold;">22/04/2017</p:column>
+         <p:column style="font-weight: bold;">Morumbi</p:column>
+          <p:column style="font-weight: bold;">16:00</p:column>
+           <p:column style="font-weight: bold;">Team 1</p:column>
+            <p:column style="font-weight: bold;"></p:column>
+             <p:column style="font-weight: bold;">Team 2</p:column>
+             <p:column style="font-weight: bold;">A</p:column>
+             
+    
+        
+    </p:row>
+    
+      <p:row>
+        <p:column style="font-weight: bold;">22/04/2017</p:column>
+         <p:column style="font-weight: bold;">Itaquerão</p:column>
+          <p:column style="font-weight: bold;">17:00</p:column>
+           <p:column style="font-weight: bold;">Team 6</p:column>
+            <p:column style="font-weight: bold;"></p:column>
+             <p:column style="font-weight: bold;">Team 7</p:column>
+                          <p:column style="font-weight: bold;">B</p:column>
+    
+        
+    </p:row>
+    
+          <p:row>
+        <p:column style="font-weight: bold;">22/04/2017</p:column>
+         <p:column style="font-weight: bold;">Vila Belmiro</p:column>
+          <p:column style="font-weight: bold;">19:00</p:column>
+           <p:column style="font-weight: bold;">Team 10</p:column>
+            <p:column style="font-weight: bold;"></p:column>
+             <p:column style="font-weight: bold;">Team 11</p:column>
+                          <p:column style="font-weight: bold;">C</p:column>
+    
+    
+        
+    </p:row>
+   
+
+    
+</p:panelGrid>
+
+<p></p>
+<p:panelGrid style="margin-top:20px">
+    <f:facet name="header">
+        <p:row>
+            <p:column colspan="9">Round 2</p:column>
+        </p:row>
+        
+        <p:row>
+            <p:column colspan="1">Date</p:column>
+            <p:column colspan="1">Place</p:column>
+            <p:column colspan="1">Time</p:column>
+            <p:column>Team 1</p:column>
+            <p:column>X</p:column>
+            <p:column>Team 2</p:column>
+            <p:column>Group</p:column>
+        </p:row>
+ 
+    </f:facet>
+    
+    
+     <p:row>
+        <p:column style="font-weight: bold;">29/04/2017</p:column>
+         <p:column style="font-weight: bold;">Vila Belmiro</p:column>
+          <p:column style="font-weight: bold;">16:00</p:column>
+           <p:column style="font-weight: bold;">Team 3</p:column>
+            <p:column style="font-weight: bold;"></p:column>
+             <p:column style="font-weight: bold;">Team 4</p:column>
+                          <p:column style="font-weight: bold;">A</p:column>
+    
+        
+    </p:row>
+    
+      <p:row>
+        <p:column style="font-weight: bold;">29/04/2017</p:column>
+         <p:column style="font-weight: bold;">Morumbi</p:column>
+          <p:column style="font-weight: bold;">17:00</p:column>
+           <p:column style="font-weight: bold;">Team 8</p:column>
+            <p:column style="font-weight: bold;"></p:column>
+             <p:column style="font-weight: bold;">Team 5</p:column>
+                          <p:column style="font-weight: bold;">B</p:column>
+    
+        
+    </p:row>
+    
+          <p:row>
+        <p:column style="font-weight: bold;">29/04/2017</p:column>
+         <p:column style="font-weight: bold;">Itaquerão</p:column>
+          <p:column style="font-weight: bold;">19:00</p:column>
+           <p:column style="font-weight: bold;">Team 12</p:column>
+            <p:column style="font-weight: bold;"></p:column>
+             <p:column style="font-weight: bold;">Team 9</p:column>
+                          <p:column style="font-weight: bold;">C</p:column>
+    
+        
+    </p:row>
+    
+    
+
+    
+</p:panelGrid>
+	
+	   
+	  
+
+       </h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+

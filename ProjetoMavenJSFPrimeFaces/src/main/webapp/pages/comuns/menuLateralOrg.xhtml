@@ -15,10 +15,25 @@
 				<p:menuitem value="#{msg['pages.comuns.menuLateral.listaUsuarios']}" url="listaUsuarios.xhtml" />
 				<p:menuitem value="#{msg['pages.comuns.menuLateral.addUsuario']}" url="signin.xhtml" />
 	       </p:submenu>
+	       
 	       <p:submenu label="#{msg['pages.comuns.menuLateral.times']}">
 				<p:menuitem value="#{msg['pages.comuns.menuLateral.listaTimes']}" url="listaUsuarios.xhtml" />
 				<p:menuitem value="#{msg['pages.aceite.tituloTime']}" url="listaUsuarios.xhtml" />
 	       </p:submenu>
+	       
+	              <p:submenu label="#{msg['pages.comuns.menuLateral.chaveamento']}">
+				<p:menuitem value="#{msg['pages.comuns.menuLateral.listarchaveamento']}" url="criachave.xhtml" />
+				<p:menuitem value="#{msg['pages.comuns.menuLateral.listarchaves']}" url="listarChaveamento.xhtml" />
+				
+	       </p:submenu>
+	       
+	            <p:submenu label="#{msg['pages.comuns.menuLateral.rodada']}">
+				<p:menuitem value="#{msg['pages.comuns.menulateral.listarodada']}" url="listarrodadas.xhtml" />
+				
+	       </p:submenu>
+	       
+	       
+	       
 		</p:panelMenu>
 	</h:form>
 </ui:composition>
