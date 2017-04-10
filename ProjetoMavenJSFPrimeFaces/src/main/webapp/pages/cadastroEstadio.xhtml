@@ -20,13 +20,13 @@
 	  <h:form>	
 		  <p:panelGrid columns="2" align="center">
 		      <p:outputLabel value="#{msg['pages.cadastroEstadio.nome']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      <p:inputText value="#{estadioManagedBean.estadio.nome}"/>
 			  <p:outputLabel value="#{msg['pages.cadastroEstadio.endereco']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:inputText value="#{estadioManagedBean.estadio.endereco}"/>
 		      <p:outputLabel value="#{msg['pages.cadastroEstadio.telefone']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      <p:inputText value="#{estadioManagedBean.estadio.telefone}"/>
 			  <p:outputLabel value="#{msg['pages.cadastroEstadio.capacidade']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:inputText value="#{estadioManagedBean.estadio.capacidade}"/>
 	  	</p:panelGrid>
 	  <p:commandButton value="#{msg['pages.cadastroEstadio.criar']}" action="#"/>
        </h:form>

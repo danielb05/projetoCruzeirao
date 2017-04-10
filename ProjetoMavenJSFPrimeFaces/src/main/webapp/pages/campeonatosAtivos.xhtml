@@ -18,21 +18,21 @@
 	  <h1><p:outputLabel value="#{msg['pages.campeonatosAtivos.titulo']}"/></h1>
 	  
 	  <h:form>	
-		     <p:dataTable value="#{alunoManagedBean.alunos}"
+		     <p:dataTable value="#{campeonatoManagedBean.campeonatos}"
                 var="aux"
-                id="tabelaAluno">
+                id="tabelaCampeonatos">
    >
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.nome']}">
-			        <p:outputLabel value="#{aux.matricula}" />
-			      </p:column>
-			      <p:column headerText="#{msg['pages.campeonatosAtivos.dataIni']}">
 			        <p:outputLabel value="#{aux.nome}" />
 			      </p:column>
+			      <p:column headerText="#{msg['pages.campeonatosAtivos.dataIni']}">
+			        <p:outputLabel value="#{aux.inicioCampeonato}" />
+			      </p:column>
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.dataFim']}">
-			        <p:outputLabel value="#{aux.curso}" />
+			        <p:outputLabel value="#{aux.fimCampeonato}" />
 			      </p:column>
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.organizador']}">
-			        <p:outputLabel value="#{aux.matricula}" />
+			        <p:outputLabel value="#{aux.organizador}" />
 			      </p:column>
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.selecionar']}">
 					<p:commandButton value="#{msg['pages.campeonatosAtivos.selecionar']}" action="#"/>

@@ -19,12 +19,12 @@
 	  <h3><p:outputLabel value="#{msg['pages.aceite.messageEntrarTime']}"/></h3>
 	  
 	  <h:form>	
-		     <p:dataTable value="#{alunoManagedBean.alunos}"
+		     <p:dataTable value="#{timeManagedBean.times}"
                 var="aux"
                 id="tabelaAluno">
    >
 			      <p:column headerText="#{msg['pages.aceite.nome']}">
-			        <p:outputLabel value="#{aux.matricula}" />
+			        <p:outputLabel value="#{aux.nome}" />
 			      </p:column>
 			      <p:column headerText="#{msg['pages.aceite.aceitar']}">
 					<p:commandButton value="#{msg['pages.aceite.aceitar']}" action="#" color="green"/>

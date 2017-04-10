@@ -20,13 +20,13 @@
 	  <h:form>	
 		  <p:panelGrid columns="2" align="center">
 		      <p:outputLabel value="#{msg['pages.signin.email']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}" type="email"/>
+		      <p:inputText value="#{usuarioManagedBean.usuario.email}" type="email"/>
 			  <p:outputLabel value="#{msg['pages.signin.senha']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}" type="password"/>
+		      <p:inputText value="#{usuarioManagedBean.usuario.senha}" type="password"/>
 		      <p:outputLabel value="#{msg['pages.signin.repetirSenha']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}" type="password"/>
+		      <p:inputText value="#{usuarioManagedBean.usuario.senha}" type="password"/>
 			  <p:outputLabel value="#{msg['pages.signin.nome']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:inputText value="#{usuarioManagedBean.usuario.nome}"/>
 		      <p:outputLabel value="#{msg['pages.signin.dataNasc']}" />
 		      <p:calendar id="button" value="#{teste.daniel.uhul}" showOn="button" placeholder="#{msg['pages.signin.dataNasc']}" />
 		      
@@ -49,7 +49,7 @@
 			  </p:selectOneMenu>
 		      
 		      <p:outputLabel value="#{msg['pages.signin.documento']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:inputText value="#{usuarioManagedBean.usuario.documento}"/>
 	  	</p:panelGrid>
 	  <h:commandButton   action="#"  value="#{msg['pages.editarPerfil.salvar']}"> </h:commandButton>  
       <button type="button" onclick="javascript:history.back()">#{msg['pages.editarPerfil.descartar']}</button>

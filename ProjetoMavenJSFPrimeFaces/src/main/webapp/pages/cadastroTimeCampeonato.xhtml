@@ -1,5 +1,5 @@
 
-<ui:composition template="templateMenu2.xhtml"
+<ui:composition template="templateMenuUsuario.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
@@ -9,53 +9,53 @@
 >
 	
 	<ui:define name="title">
-		<h:outputText value="#{msg['pages.cadastroTime.title']}" />
+		<h:outputText value="#{msg['pages.cadastroTimeCampeonato.title']}" />
 	</ui:define>
 	
 
 	<ui:define name="principal">
 	  
-	  <h1><p:outputLabel value="#{msg['pages.cadastroTime.title']}"/></h1>
+	  <h1><p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.title']}"/></h1>
 	  
 	  <h:form>	
 		  <p:panelGrid columns="2" align="center">
-		      <p:outputLabel value="#{msg['pages.cadastroTime.nome']}" />
+		      <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.nome']}" />
 		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
 		      
 		      
-		<p:outputLabel for="jogadores" value="#{msg['pages.cadastroTime.jogadores']}" />
+		<p:outputLabel for="jogadores" value="#{msg['pages.cadastroTimeCampeonato.jogadores']}" />
         <p:selectOneMenu id="jogadores" value="#{selectOneMenuView.jogadores}" style="width:125px">
             <f:selectItem itemLabel="#{msg['pages.cadastroTime.splay']}" itemValue="" />
         </p:selectOneMenu>
         
         
         
-        <p:outputLabel for="tecnico" value="#{msg['pages.cadastroTime.tecnico']}" />
+        <p:outputLabel for="tecnico" value="#{msg['pages.cadastroTimeCampeonato.tecnico']}" />
         <p:selectOneMenu id="tecnico" value="#{selectOneMenuView.tecnico}" style="width:125px">
         <f:selectItem itemLabel="#{msg['pages.cadastroTime.scoach']}" itemValue="" />
         </p:selectOneMenu>
         
-        <p:outputLabel for="massagista" value="#{msg['pages.cadastroTime.massagista']}" />
+        <p:outputLabel for="massagista" value="#{msg['pages.cadastroTimeCampeonato.massagista']}" />
         <p:selectOneMenu id="massagista" value="#{selectOneMenuView.massagista}" style="width:125px">
         <f:selectItem itemLabel="#{msg['pages.cadastroTime.smas']}" itemValue="" />
         </p:selectOneMenu>
         
-         <p:outputLabel for="ptrainer" value="#{msg['pages.cadastroTime.personaltrainer']}" />
+         <p:outputLabel for="ptrainer" value="#{msg['pages.cadastroTimeCampeonato.personaltrainer']}" />
         <p:selectOneMenu id="ptrainer" value="#{selectOneMenuView.ptrainer}" style="width:125px">
         <f:selectItem itemLabel="#{msg['pages.cadastroTime.sptrainer']}" itemValue="" />
         </p:selectOneMenu>
         
-                 <p:outputLabel for="diretor" value="#{msg['pages.cadastroTime.diretor']}" />
+                 <p:outputLabel for="diretor" value="#{msg['pages.cadastroTimeCampeonato.diretor']}" />
         <p:selectOneMenu id="diretor" value="#{selectOneMenuView.diretor}" style="width:125px">
         <f:selectItem itemLabel="#{msg['pages.cadastroTime.sdiretor']}" itemValue="" />
         </p:selectOneMenu>
         
-        <p:outputLabel for="categoria" value="#{msg['pages.cadastroTime.categoria']}" />
+        <p:outputLabel for="categoria" value="#{msg['pages.cadastroTimeCampeonato.categoria']}" />
         <p:selectOneMenu id="categoria" value="#{selectOneMenuView.categoria}" style="width:125px">
         <f:selectItem itemLabel="#{msg['pages.cadastroTime.scategoria']}" itemValue="" />
         </p:selectOneMenu>
         
-          <p:outputLabel for="chave" value="#{msg['pages.cadastroTime.chave']}" />
+          <p:outputLabel for="chave" value="#{msg['pages.cadastroTimeCampeonato.chave']}" />
         <p:selectOneMenu id="chave" value="#{selectOneMenuView.chave}" style="width:125px">
         <f:selectItem itemLabel="#{msg['pages.cadastroTime.schave']}" itemValue="" />
         </p:selectOneMenu>
@@ -64,10 +64,10 @@
         
         
 
-			  <p:outputLabel value="#{msg['pages.cadastroTime.minjogador']}" />
+			  <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.minjogador']}" />
 		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
 		      
-		      <p:outputLabel value="#{msg['pages.cadastroTime.maxjogador']}" />
+		      <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.maxjogador']}" />
 		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
 		      		      
 			 

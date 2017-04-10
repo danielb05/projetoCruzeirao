@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class Campeonato {
 	
+	private String nome;
 	private Date inicioCampeonato;
 	private Date fimCampeonato;
 	private Date inicioInscricao;
@@ -53,6 +54,12 @@ public class Campeonato {
 	}
 	public void setOrganizador(Usuario organizador) {
 		this.organizador = organizador;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	
 	

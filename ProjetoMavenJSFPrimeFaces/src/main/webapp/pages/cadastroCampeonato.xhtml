@@ -20,17 +20,17 @@
 	  <h:form>	
 		  <p:panelGrid columns="2" align="center">
 		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.nome']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      <p:inputText value="#{campeonatoManagedBean.campeonato.nome}"/>
 			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.dataIni']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:inputText value="#{campeonatoManagedBean.campeonato.inicioCampeonato}"/>
 		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.dataFim']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      <p:inputText value="#{campeonatoManagedBean.campeonato.fimCampeonato}"/>
 			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.inscriIni']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:inputText value="#{campeonatoManagedBean.campeonato.inicioInscricao}"/>
 		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.inscriFim']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      <p:inputText value="#{campeonatoManagedBean.campeonato.fimInscricao}"/>
 			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.taxa']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
+		      <p:inputText value="#{campeonatoManagedBean.campeonato.taxa}"/>
 		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.categorias']}" />
 	  	</p:panelGrid>
 	  <p:commandButton value="#{msg['pages.signin.entrar']}" action="#"/>
