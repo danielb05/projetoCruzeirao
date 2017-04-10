@@ -39,21 +39,4 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/main/webapp/WEB-INF/lib/commons-fileupload-1.3.2.jar</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/commons-fileupload-1.3.2-bin/lib/commons-fileupload-1.3.2.jar</location>
-		</link>
-		<link>
-			<name>src/main/webapp/WEB-INF/lib/primefaces-6.0.jar</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/primefaces-6.0.jar</location>
-		</link>
-		<link>
-			<name>src/main/webapp/WEB-INF/lib/ui-lightness-1.0.10.jar</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/ui-lightness-1.0.10.jar</location>
-		</link>
-	</linkedResources>
 </projectDescription>
