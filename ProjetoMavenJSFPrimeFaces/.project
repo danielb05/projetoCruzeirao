@@ -55,35 +55,5 @@
 			<type>1</type>
 			<location>C:/Users/Maari/Desktop/ui-lightness-1.0.10.jar</location>
 		</link>
-		<link>
-			<name>src/main/webapp/resources/sistema/1_0/imagens/55.png</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/55.png</location>
-		</link>
-		<link>
-			<name>src/main/webapp/resources/sistema/1_0/imagens/cruzp2.png</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/cruzp2.png</location>
-		</link>
-		<link>
-			<name>src/main/webapp/resources/sistema/1_0/imagens/cruzp3.png</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/cruzp3.png</location>
-		</link>
-		<link>
-			<name>src/main/webapp/resources/sistema/1_0/imagens/cruzp4.png</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/cruzp4.png</location>
-		</link>
-		<link>
-			<name>src/main/webapp/resources/sistema/1_0/imagens/prefeitura.png</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/prefeitura.png</location>
-		</link>
-		<link>
-			<name>src/main/webapp/resources/sistema/1_0/imagens/teste.png</name>
-			<type>1</type>
-			<location>C:/Users/Maari/Desktop/teste.png</location>
-		</link>
 	</linkedResources>
 </projectDescription>
