@@ -1,4 +1,3 @@
-
 <ui:composition template="templateMenuJuiz.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
@@ -17,19 +16,18 @@
 	  
 	  
 	<h2><p:outputLabel value="Minhas Partidas" /></h2>
-   <p:dataTable value="#{alunoManagedBean.alunos}"
-   >
+   <p:dataTable value="">
       <p:column headerText="Time">
-        <p:outputLabel value="#{aux.matricula}" />
+        <p:outputLabel value="" />
       </p:column>
         <p:column headerText="Time">
-        <p:outputLabel value="#{aux.nome}" />
+        <p:outputLabel value="" />
        </p:column>
       <p:column headerText="Estadio">
-        <p:outputLabel value="#{aux.curso}" />
+        <p:outputLabel value="" />
       </p:column>
       <p:column headerText="Horario">
-        <p:outputLabel value="#{aux.curso}" />
+        <p:outputLabel value="" />
       </p:column>
       
    </p:dataTable>	
@@ -37,9 +35,3 @@
    
 	</ui:define>
 </ui:composition>
-
-
-
-
-
-
