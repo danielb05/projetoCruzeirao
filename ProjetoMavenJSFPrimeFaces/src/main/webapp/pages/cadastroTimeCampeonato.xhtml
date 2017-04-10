@@ -25,39 +25,39 @@
 		      
 		<p:outputLabel for="jogadores" value="#{msg['pages.cadastroTimeCampeonato.jogadores']}" />
         <p:selectOneMenu id="jogadores" value="#{selectOneMenuView.jogadores}" style="width:125px">
-            <f:selectItem itemLabel="#{msg['pages.cadastroTime.splay']}" itemValue="" />
+            <f:selectItem itemLabel="" itemValue="" />
         </p:selectOneMenu>
         
         
         
         <p:outputLabel for="tecnico" value="#{msg['pages.cadastroTimeCampeonato.tecnico']}" />
         <p:selectOneMenu id="tecnico" value="#{selectOneMenuView.tecnico}" style="width:125px">
-        <f:selectItem itemLabel="#{msg['pages.cadastroTime.scoach']}" itemValue="" />
+        <f:selectItem itemLabel="" itemValue="" />
         </p:selectOneMenu>
         
         <p:outputLabel for="massagista" value="#{msg['pages.cadastroTimeCampeonato.massagista']}" />
         <p:selectOneMenu id="massagista" value="#{selectOneMenuView.massagista}" style="width:125px">
-        <f:selectItem itemLabel="#{msg['pages.cadastroTime.smas']}" itemValue="" />
+        <f:selectItem itemLabel="" itemValue="" />
         </p:selectOneMenu>
         
          <p:outputLabel for="ptrainer" value="#{msg['pages.cadastroTimeCampeonato.personaltrainer']}" />
         <p:selectOneMenu id="ptrainer" value="#{selectOneMenuView.ptrainer}" style="width:125px">
-        <f:selectItem itemLabel="#{msg['pages.cadastroTime.sptrainer']}" itemValue="" />
+        <f:selectItem itemLabel="" itemValue="" />
         </p:selectOneMenu>
         
                  <p:outputLabel for="diretor" value="#{msg['pages.cadastroTimeCampeonato.diretor']}" />
         <p:selectOneMenu id="diretor" value="#{selectOneMenuView.diretor}" style="width:125px">
-        <f:selectItem itemLabel="#{msg['pages.cadastroTime.sdiretor']}" itemValue="" />
+        <f:selectItem itemLabel="" itemValue="" />
         </p:selectOneMenu>
         
         <p:outputLabel for="categoria" value="#{msg['pages.cadastroTimeCampeonato.categoria']}" />
         <p:selectOneMenu id="categoria" value="#{selectOneMenuView.categoria}" style="width:125px">
-        <f:selectItem itemLabel="#{msg['pages.cadastroTime.scategoria']}" itemValue="" />
+        <f:selectItem itemLabel="" itemValue="" />
         </p:selectOneMenu>
         
           <p:outputLabel for="chave" value="#{msg['pages.cadastroTimeCampeonato.chave']}" />
         <p:selectOneMenu id="chave" value="#{selectOneMenuView.chave}" style="width:125px">
-        <f:selectItem itemLabel="#{msg['pages.cadastroTime.schave']}" itemValue="" />
+        <f:selectItem itemLabel="" itemValue="" />
         </p:selectOneMenu>
         
         
@@ -73,8 +73,9 @@
 			 
 	  	</p:panelGrid>
 	  	<br></br>
-	  	
+	  
 	  <p:commandButton value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" action="timeCadastrado.xhtml"/>
+	  
        </h:form>
 </ui:define>
 </ui:composition>
