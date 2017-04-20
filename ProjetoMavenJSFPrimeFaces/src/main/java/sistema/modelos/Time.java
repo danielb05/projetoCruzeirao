@@ -1,20 +1,25 @@
 package sistema.modelos;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Time {
 	
 	private String nomeTime;
-	private ArrayList<Usuario> jogadores;
-	private Usuario tecnico;
-	private Usuario massagista;
-	private Usuario prepFisico;
-	private Usuario diretor;
-	private Categoria categoria;
-	private int qtdMinima;
-	private int qtdMaxima;
+	// nao precisa mais //private ArrayList<Usuario> jogadores;
+	// nao precisa mais //private Usuario tecnico;
+	// nao precisa mais //private Usuario massagista;
+	// nao precisa mais //private Usuario prepFisico;
+	// nao precisa mais //private Usuario diretor;
+	// nao precisa mais //private Categoria categoria;
+	// nao precisa mais //private int qtdMinima;
+	// nao precisa mais //private int qtdMaxima;
+	// nao precisa mais //private String chave;
 	
-	private String chave;
+	//alteracoes glauco
+	private Date dataFundacao;
+	private String cidade;
+	private ArrayList<Usuario> diretores;
 	
 	public String getNomeTime() {
 		return nomeTime;
@@ -22,7 +27,7 @@ public class Time {
 	public void setNomeTime(String nomeTime) {
 		this.nomeTime = nomeTime;
 	}
-	public ArrayList<Usuario> getJogadores() {
+	/*public ArrayList<Usuario> getJogadores() {
 		return jogadores;
 	}
 	public void setJogadores(ArrayList<Usuario> jogadores) {
@@ -75,6 +80,24 @@ public class Time {
 	}
 	public void setChave(String chave) {
 		this.chave = chave;
+	}*/
+	public Date getDataFundacao() {
+		return dataFundacao;
+	}
+	public void setDataFundacao(Date dataFundacao) {
+		this.dataFundacao = dataFundacao;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public ArrayList<Usuario> getDiretores() {
+		return diretores;
+	}
+	public void setDiretores(ArrayList<Usuario> diretores) {
+		this.diretores = diretores;
 	}
 
 }

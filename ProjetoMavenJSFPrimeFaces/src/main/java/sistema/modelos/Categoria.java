@@ -5,26 +5,34 @@ import java.util.ArrayList;
 public class Categoria {
 	
 	private String nome;
-	private char genero;
+	private Enum genero;
 	private String anoMaximo;
-	private ArrayList<Time> times;
-	private boolean estadoTime;
-	private boolean estadoJogador;
-	private int qtdMinimaTimes;
-	private int qtdMaximaTimes;
+	// nao precisa mais //private ArrayList<Time> times;
+	// nao precisa mais //private boolean estadoTime;
+	// nao precisa mais //private boolean estadoJogador;
+	// nao precisa mais //private int qtdMinimaTimes;
+	// nao precisa mais //private int qtdMaximaTimes;
 	private int qtdMinimaJogadores;
 	private int qtdMaximaJogadores;
-	private ArrayList<String> chaves;
+	// nao precisa mais //private ArrayList<String> chaves;
+	
+	//alteracoes glauco
+	private ArrayList<Inscricao> inscricoes;
+	private Campeonato campeonato;
+	private ArrayList<Fase> fases;
+	private int numero;
+	
+	
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public char getGenero() {
+	public Enum getGenero() {
 		return genero;
 	}
-	public void setGenero(char genero) {
+	public void setGenero(Enum genero) {
 		this.genero = genero;
 	}
 	public String getAnoMaximo() {
@@ -33,7 +41,7 @@ public class Categoria {
 	public void setAnoMaximo(String anoMaximo) {
 		this.anoMaximo = anoMaximo;
 	}
-	public ArrayList<Time> getTimes() {
+	/*public ArrayList<Time> getTimes() {
 		return times;
 	}
 	public void setTimes(ArrayList<Time> times) {
@@ -62,7 +70,7 @@ public class Categoria {
 	}
 	public void setQtdMaximaTimes(int qtdMaximaTimes) {
 		this.qtdMaximaTimes = qtdMaximaTimes;
-	}
+	}*/
 	public int getQtdMinimaJogadores() {
 		return qtdMinimaJogadores;
 	}
@@ -75,11 +83,36 @@ public class Categoria {
 	public void setQtdMaximaJogadores(int qtdMaximaJogadores) {
 		this.qtdMaximaJogadores = qtdMaximaJogadores;
 	}
-	public ArrayList<String> getChaves() {
+	/*public ArrayList<String> getChaves() {
 		return chaves;
 	}
 	public void setChaves(ArrayList<String> chaves) {
 		this.chaves = chaves;
+	}*/
+	public ArrayList<Inscricao> getInscricoes() {
+		return inscricoes;
 	}
+	public void setInscricoes(ArrayList<Inscricao> inscricoes) {
+		this.inscricoes = inscricoes;
+	}
+	public Campeonato getCampeonato() {
+		return campeonato;
+	}
+	public void setCampeonato(Campeonato campeonato) {
+		this.campeonato = campeonato;
+	}
+	public ArrayList<Fase> getFases() {
+		return fases;
+	}
+	public void setFases(ArrayList<Fase> fases) {
+		this.fases = fases;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	
 
 }

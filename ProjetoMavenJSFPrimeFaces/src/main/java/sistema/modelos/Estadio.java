@@ -5,6 +5,7 @@ public class Estadio {
 	private String endereco;
 	private int capacidade;
 	private String telefone;
+	
 	public String getNome() {
 		return nome;
 	}

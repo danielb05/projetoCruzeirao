@@ -12,7 +12,13 @@ public class Campeonato {
 	private Date fimInscricao;
 	private double taxa;
 	private ArrayList<Categoria> categorias;
-	private Usuario organizador;
+	// nao precisa mais //private Usuario organizador;
+	
+	//alteracoes glauco
+	private ArrayList<Estadio> locais;
+	private ArrayList<Juiz> juizes;
+	
+	
 	public Date getInicioCampeonato() {
 		return inicioCampeonato;
 	}
@@ -49,17 +55,29 @@ public class Campeonato {
 	public void setCategorias(ArrayList<Categoria> categorias) {
 		this.categorias = categorias;
 	}
-	public Usuario getOrganizador() {
+	/*public Usuario getOrganizador() {
 		return organizador;
 	}
 	public void setOrganizador(Usuario organizador) {
 		this.organizador = organizador;
-	}
+	}*/
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	public ArrayList<Estadio> getLocais() {
+		return locais;
+	}
+	public void setLocais(ArrayList<Estadio> locais) {
+		this.locais = locais;
+	}
+	public ArrayList<Juiz> getJuizes() {
+		return juizes;
+	}
+	public void setJuizes(ArrayList<Juiz> juizes) {
+		this.juizes = juizes;
 	}
 	
 	
