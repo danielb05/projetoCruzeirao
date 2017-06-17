@@ -1,21 +1,50 @@
 package sistema.modelos;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Campeonato {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+@Entity
+public class Campeonato implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int CampeonatoID;
+	
+	public int getCampeonatoID() {
+		return CampeonatoID;
+	}
+	public void setCampeonatoID(int campeonatoID) {
+		CampeonatoID = campeonatoID;
+	}
 	private String nome;
+	@Temporal(TemporalType.DATE)
 	private Date inicioCampeonato;
+	@Temporal(TemporalType.DATE)
 	private Date fimCampeonato;
+	@Temporal(TemporalType.DATE)
 	private Date inicioInscricao;
+	@Temporal(TemporalType.DATE)
 	private Date fimInscricao;
 	private double taxa;
-	private ArrayList<Categoria> categorias;
-	// nao precisa mais //private Usuario organizador;
 	
-	//alteracoes glauco
+	@OneToMany(mappedBy="campeonato",targetEntity = Categoria.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private ArrayList<Categoria> categorias;
+	
+	@OneToMany(targetEntity = Estadio.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private ArrayList<Estadio> locais;
+	
+	@OneToMany(targetEntity = Juiz.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private ArrayList<Juiz> juizes;
 	
 	
@@ -55,12 +84,6 @@ public class Campeonato {
 	public void setCategorias(ArrayList<Categoria> categorias) {
 		this.categorias = categorias;
 	}
-	/*public Usuario getOrganizador() {
-		return organizador;
-	}
-	public void setOrganizador(Usuario organizador) {
-		this.organizador = organizador;
-	}*/
 	public String getNome() {
 		return nome;
 	}

@@ -1,27 +1,90 @@
 package sistema.modelos;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Usuario {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@NamedQuery(name = "Usuario.pesquisarPorUserEmail", query = "select u from Usuario u where u.email = :email")
+public class Usuario implements Serializable{
+	public static final String PESQUISAR_POR_EMAIL = "Usuario.pesquisarPorUserEmail";
+
+	private enum Sexo{
+		M,F;
+		
+	};
+	
+	public enum TipoDocumento{
+		RG,CPF,PASSAPORTE,DRIVER,CREF;
+	}
+	private enum Tipo{
+		ADMIN,
+		ORG,
+		
+	};
+	public int getIdUsuario() {
+		return UsuarioID;
+	}
+	public void setIdUsuario(int idUsuario) {
+		this.UsuarioID = idUsuario;
+	}
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)	
+	private int UsuarioID;
 	private String nome;
+	@Temporal(TemporalType.DATE)
 	private Date datanasc;
+	@Enumerated(EnumType.STRING)
+	private Sexo sexo;
+	@Enumerated(EnumType.STRING)
+	private Tipo tipo;
+	
+	@Enumerated(EnumType.STRING)	
+	private TipoDocumento tipodocumento;
+	
+	public TipoDocumento getTipodocumento() {
+		return tipodocumento;
+	}
+	public void setTipodocumento(TipoDocumento tipodocumento) {
+		this.tipodocumento = tipodocumento;
+	}
+	
+	
 	private String email;
 	private String senha;
 	private String papel;
 	private String documento;
-	private String tipoDocumento;
-	// nao precisa mais //private boolean aceiteTime;
-	
-	//alteracoes glauco
+
+	@ManyToMany(mappedBy="diretores",targetEntity=Time.class, fetch = FetchType.LAZY)
 	private ArrayList<Time> times;
+	
+	@OneToMany(targetEntity = Inscricao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private ArrayList<Inscricao> inscricoes;
+	
+	@OneToMany(targetEntity = Campeonato.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+
 	private ArrayList<Campeonato> campeonatos;
-	private Enum tipo;
+	
+
 	private String telefoneFixo;
 	private String telefoneMovel;
 	private String endereco;
-	private Enum sexo;
 	private String foto;
 	
 	public String getNome() {
@@ -60,18 +123,7 @@ public class Usuario {
 	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
-	public String getTipoDocumento() {
-		return tipoDocumento;
-	}
-	public void setTipoDocumento(String tipoDocumento) {
-		this.tipoDocumento = tipoDocumento;
-	}
-	/*public boolean isAceiteTime() {
-		return aceiteTime;
-	}
-	public void setAceiteTime(boolean aceiteTime) {
-		this.aceiteTime = aceiteTime;
-	}*/
+
 	public ArrayList<Time> getTimes() {
 		return times;
 	}
@@ -90,10 +142,10 @@ public class Usuario {
 	public void setCampeonatos(ArrayList<Campeonato> campeonatos) {
 		this.campeonatos = campeonatos;
 	}
-	public Enum getTipo() {
+	public Tipo getTipo() {
 		return tipo;
 	}
-	public void setTipo(Enum tipo) {
+	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
 	}
 	public String getTelefoneFixo() {
@@ -114,10 +166,10 @@ public class Usuario {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public Enum getSexo() {
+	public Sexo getSexo() {
 		return sexo;
 	}
-	public void setSexo(Enum sexo) {
+	public void setSexo(Sexo sexo) {
 		this.sexo = sexo;
 	}
 	public String getFoto() {

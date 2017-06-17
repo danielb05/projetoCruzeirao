@@ -1,17 +1,37 @@
 package sistema.modelos;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Inscricao {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Inscricao implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	
+	@ManyToOne(targetEntity=Time.class,fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Time time;
 	private String comprovante;
 	private boolean confirmacao;
 		
 	//alteracoes glauco
 	private long numero;
+	@OneToMany(mappedBy = "inscricao", targetEntity = Inscrito.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL )
 	private ArrayList<Inscrito> inscritos;
+	
+	@ManyToOne(targetEntity=Categoria.class,fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Categoria categoria;
+	@OneToMany(targetEntity = Partida.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private ArrayList<Partida> partidas;
 	private boolean validada;
 	

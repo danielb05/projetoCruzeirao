@@ -19,38 +19,41 @@
 	  <h:form>	
 		  <p:panelGrid columns="2" align="center">
 		      <p:outputLabel value="#{msg['pages.signin.email']}" />
-		      <p:inputText value="" type="email"/>
+		      <p:inputText value="#{usuarioManagedBean.usuario.email}"/>
 			  <p:outputLabel value="#{msg['pages.signin.senha']}" />
-		      <p:inputText value="" type="password"/>
+		      <p:inputText value="#{usuarioManagedBean.usuario.senha}"/>
 		      <p:outputLabel value="#{msg['pages.signin.repetirSenha']}" />
-		      <p:inputText value="" type="password"/>
+		      <p:inputText value="#{usuarioManagedBean.usuario.senha}"/>
 			  <p:outputLabel value="#{msg['pages.signin.nome']}" />
-		      <p:inputText value=""/>
-		      <p:outputLabel value="#{msg['pages.signin.dataNasc']}" />
-		      <p:calendar id="button" value="#{teste.daniel.uhul}" showOn="button" placeholder="#{msg['pages.signin.dataNasc']}" />
+		      <p:inputText value="#{usuarioManagedBean.usuario.nome}"/>
+		      		      
+		       <p:outputLabel value="#{msg['pages.signin.telefone']}" />
+		      <p:inputText value="#{usuarioManagedBean.usuario.telefoneFixo}"/>
+		       <p:outputLabel value="#{msg['pages.signin.celular']}" />
+		      <p:inputText value="#{usuarioManagedBean.usuario.telefoneMovel}"/>
+		       <p:outputLabel value="#{msg['pages.signin.endereco']}" />
+		      <p:inputText value="#{usuarioManagedBean.usuario.endereco}"/> 
 		      
-		      <p:outputLabel value="#{msg['pages.signin.sexo']}" />
-        		<p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:125px">
-	            <f:selectItem itemLabel="#{msg['pages.signin.sexo']}" itemValue="" />
-	            <f:selectItem itemLabel="#{msg['pages.signin.sexo1']}" itemValue="#{msg['pages.signin.sexo1']}" />
-	            <f:selectItem itemLabel="#{msg['pages.signin.sexo2']}" itemValue="#{msg['pages.signin.sexo2']}" />
-			  </p:selectOneMenu>
-		      
-
-		      <p:outputLabel value="#{msg['pages.signin.docTipo']}" />
-        	  <p:selectOneMenu id="console2" value="#{selectOneMenuView.console}" style="width:125px">
+		      <p:outputLabel value="#{msg['pages.cadastroUsuario.sexo']}" />
+		 		<p:selectOneMenu value="#{usuarioManagedBean.usuario.sexo}" required="true"> 
+            	<f:selectItem itemLabel="#{msg['pages.padrao.selecione']}" itemValue=""/>
+            	<f:selectItem itemLabel="#{msg['pages.signin.sexo1']}" itemValue="M" />
+            	<f:selectItem itemLabel="#{msg['pages.signin.sexo2']}" itemValue="F" />
+            	</p:selectOneMenu>
+            	
+            	<p:outputLabel value="#{msg['pages.signin.docTipo']}" />
+        	  <p:selectOneMenu value="#{usuarioManagedBean.usuario.tipodocumento}" required="true" style="width:125px">
 		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo']}" itemValue="" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo1']}" itemValue="#{msg['pages.signin.docTipo1']}" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo2']}" itemValue="#{msg['pages.signin.docTipo2']}" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo3']}" itemValue="#{msg['pages.signin.docTipo3']}" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo4']}" itemValue="#{msg['pages.signin.docTipo4']}" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo5']}" itemValue="#{msg['pages.signin.docTipo5']}" />
-			  </p:selectOneMenu>
-		      
-		      <p:outputLabel value="#{msg['pages.signin.documento']}" />
-		      <p:inputText value=""/>
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo1']}" itemValue="CPF" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo2']}" itemValue="RG" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo3']}" itemValue="PASSAPORTE" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo4']}" itemValue="DRIVER" />
+		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo5']}" itemValue="CREF" />
+			  </p:selectOneMenu>   
+		    
+	
 	  	</p:panelGrid>
-	  <p:commandButton value="#{msg['pages.signin.entrar']}" action="#"/>
-       </h:form>
+ <p:commandButton value="#{msg['pages.cadastroEstadio.criar']}" action="#{usuarioManagedBean.salvar}"/>
+        </h:form>
 </ui:define>
 </ui:composition>

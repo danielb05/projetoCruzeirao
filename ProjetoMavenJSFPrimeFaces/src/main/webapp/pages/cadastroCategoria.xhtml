@@ -20,19 +20,38 @@
 	  <h:form>	
 	  <p:panelGrid columns="2">
       <p:outputLabel value="#{msg['pages.cadastroCategoria.nome']}" />
-      <p:inputText value=""/>
+      <p:inputText value="#{categoriaManagedBean.categoria.nome}"/>
+      
 	  <p:outputLabel value="#{msg['pages.cadastroCategoria.ano']}" />
-      <p:inputText value=""/>
+      <p:inputText value="#{categoriaManagedBean.categoria.anoMaximo}"/>
+      
       	  <p:outputLabel value="#{msg['pages.cadastroCategoria.genero']}" />
-      <p:inputText value=""/>
+      <p:inputText value="#{categoriaManagedBean.categoria.numero}"/>
+      
       	  <p:outputLabel value="#{msg['pages.cadastroCategoria.qtdMinJogadores']}" />
-      <p:inputText value=""/>
+      <p:spinner id="basic" value="#{categoriaManagedBean.categoria.qtdMinimaJogadores}" />
+      
       	  <p:outputLabel value="#{msg['pages.cadastroCategoria.qtdMaxJogadores']}" />
-      <p:inputText value=""/>
+      <p:spinner id="basic1" value="#{categoriaManagedBean.categoria.qtdMaximaJogadores}" />    
+
+       
+        
+          <p:outputLabel value="#{msg['pages.cadastroUsuario.sexo']}" />
+		 		<p:selectOneMenu value="#{categoriaManagedBean.categoria.genero}" required="true"> 
+            	<f:selectItem itemLabel="#{msg['pages.padrao.selecione']}" itemValue=""/>
+            	<f:selectItem itemLabel="#{msg['pages.signin.sexo1']}" itemValue="M" />
+            	<f:selectItem itemLabel="#{msg['pages.signin.sexo2']}" itemValue="F" />
+            	</p:selectOneMenu>
+            	
+             <p:outputLabel value="#{msg['pages.cadastroUsuario.sexo']}" />	
+            	 <p:selectOneMenu id="console" value="#{categoriaManagedBean.categoria.campeonato}" style="width:125px">
+            <f:selectItems value = "#{categoriaManagedBean.campeonatos}" var="camp" itemLabel="#{camp.nome}" itemValue="#{camp.campeonatoID}" />
+        </p:selectOneMenu>
+      
 	  </p:panelGrid>
 	  <p></p>
 	  <p:commandButton value="#{msg['pages.cadastroCategoria.cadastrar']}" 
-	                 action="#"
+	                 action="#{categoriaManagedBean.salvar}"
 	                 />
        </h:form>
 	   

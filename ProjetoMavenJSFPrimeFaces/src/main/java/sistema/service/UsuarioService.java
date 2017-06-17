@@ -1,21 +1,41 @@
 package sistema.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import sistema.modelos.Usuario;
 
-
+import sistema.dao.UsuarioDAO;
 public class UsuarioService {
 	
-
-	private ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-	
-	public void salvar(Usuario usuario){
-		usuarios.add(usuario);
+	UsuarioDAO UsuarioDAO = new UsuarioDAO();
+ 	
+	public void salvar(Usuario usuario)
+	{
+		usuario = UsuarioDAO.save(usuario);
+		UsuarioDAO.closeEntityManager();
+		
+		
 	}
 	
-	public ArrayList<Usuario> getUsuarios() {
-		return usuarios;
+	public List <Usuario> getUsuarios()
+	{
+		List <Usuario> list = UsuarioDAO.getAll(Usuario.class);
+		UsuarioDAO.closeEntityManager();
+		return list;
+	}
+
+	public void alterar(Usuario usuario) {
+		UsuarioDAO.save(usuario);
+		UsuarioDAO.closeEntityManager();
+	}
+
+	
+	public void remover(Usuario usuario) {
+		
+		usuario = UsuarioDAO.getById(Usuario.class, usuario.getIdUsuario());
+		UsuarioDAO.remove(usuario);
+		UsuarioDAO.closeEntityManager();
 	}
 
 	

@@ -1,25 +1,52 @@
 package sistema.modelos;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Categoria {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+@Entity
+public class Categoria implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int CategoriaID;
+	
+	public int getCategoriaID() {
+		return CategoriaID;
+	}
+	public void setCategoriaID(int categoriaID) {
+		CategoriaID = categoriaID;
+	}
 	private String nome;
-	private Enum genero;
+	private enum Genero{
+		M,F
+	}
+	
+	@Enumerated(EnumType.STRING)
+	private Genero genero;
 	private String anoMaximo;
-	// nao precisa mais //private ArrayList<Time> times;
-	// nao precisa mais //private boolean estadoTime;
-	// nao precisa mais //private boolean estadoJogador;
-	// nao precisa mais //private int qtdMinimaTimes;
-	// nao precisa mais //private int qtdMaximaTimes;
 	private int qtdMinimaJogadores;
 	private int qtdMaximaJogadores;
-	// nao precisa mais //private ArrayList<String> chaves;
-	
-	//alteracoes glauco
+	@OneToMany(mappedBy = "categoria", targetEntity = Inscricao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL )
 	private ArrayList<Inscricao> inscricoes;
+	
+	@ManyToOne
 	private Campeonato campeonato;
+	
+	@OneToMany(targetEntity = Fase.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private ArrayList<Fase> fases;
+	
 	private int numero;
 	
 	
@@ -29,10 +56,10 @@ public class Categoria {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Enum getGenero() {
+	public Genero getGenero() {
 		return genero;
 	}
-	public void setGenero(Enum genero) {
+	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
 	public String getAnoMaximo() {
@@ -41,36 +68,7 @@ public class Categoria {
 	public void setAnoMaximo(String anoMaximo) {
 		this.anoMaximo = anoMaximo;
 	}
-	/*public ArrayList<Time> getTimes() {
-		return times;
-	}
-	public void setTimes(ArrayList<Time> times) {
-		this.times = times;
-	}
-	public boolean isEstadoTime() {
-		return estadoTime;
-	}
-	public void setEstadoTime(boolean estadoTime) {
-		this.estadoTime = estadoTime;
-	}
-	public boolean isEstadoJogador() {
-		return estadoJogador;
-	}
-	public void setEstadoJogador(boolean estadoJogador) {
-		this.estadoJogador = estadoJogador;
-	}
-	public int getQtdMinimaTimes() {
-		return qtdMinimaTimes;
-	}
-	public void setQtdMinimaTimes(int qtdMinimaTimes) {
-		this.qtdMinimaTimes = qtdMinimaTimes;
-	}
-	public int getQtdMaximaTimes() {
-		return qtdMaximaTimes;
-	}
-	public void setQtdMaximaTimes(int qtdMaximaTimes) {
-		this.qtdMaximaTimes = qtdMaximaTimes;
-	}*/
+	
 	public int getQtdMinimaJogadores() {
 		return qtdMinimaJogadores;
 	}
@@ -83,12 +81,7 @@ public class Categoria {
 	public void setQtdMaximaJogadores(int qtdMaximaJogadores) {
 		this.qtdMaximaJogadores = qtdMaximaJogadores;
 	}
-	/*public ArrayList<String> getChaves() {
-		return chaves;
-	}
-	public void setChaves(ArrayList<String> chaves) {
-		this.chaves = chaves;
-	}*/
+	
 	public ArrayList<Inscricao> getInscricoes() {
 		return inscricoes;
 	}

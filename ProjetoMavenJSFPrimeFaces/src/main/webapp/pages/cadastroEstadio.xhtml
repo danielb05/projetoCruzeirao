@@ -28,7 +28,7 @@
 			  <p:outputLabel value="#{msg['pages.cadastroEstadio.capacidade']}" />
 		      <p:inputText value="#{estadioManagedBean.estadio.capacidade}"/>
 	  	</p:panelGrid>
-	  <p:commandButton value="#{msg['pages.cadastroEstadio.criar']}" action="#"/>
+	  <p:commandButton value="#{msg['pages.cadastroEstadio.criar']}" action="#{estadioManagedBean.salvar}"/>
        </h:form>
 </ui:define>
 </ui:composition>

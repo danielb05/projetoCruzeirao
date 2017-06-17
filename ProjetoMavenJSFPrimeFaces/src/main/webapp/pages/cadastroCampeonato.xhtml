@@ -21,19 +21,13 @@
 		  <p:panelGrid columns="2" align="center">
 		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.nome']}" />
 		      <p:inputText value="#{campeonatoManagedBean.campeonato.nome}"/>
-			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.dataIni']}" />
-		      <p:inputText value="#{campeonatoManagedBean.campeonato.inicioCampeonato}"/>
-		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.dataFim']}" />
-		      <p:inputText value="#{campeonatoManagedBean.campeonato.fimCampeonato}"/>
-			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.inscriIni']}" />
-		      <p:inputText value="#{campeonatoManagedBean.campeonato.inicioInscricao}"/>
-		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.inscriFim']}" />
-		      <p:inputText value="#{campeonatoManagedBean.campeonato.fimInscricao}"/>
+
 			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.taxa']}" />
-		      <p:inputText value="#{campeonatoManagedBean.campeonato.taxa}"/>
-		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.categorias']}" />
+<p:spinner id="prefix" value="#{campeonatoManagedBean.campeonato.taxa}" prefix="$" min="0" />
+		     
+		      
 	  	</p:panelGrid>
-	  <p:commandButton value="#{msg['pages.signin.entrar']}" action="#"/>
+	  <p:commandButton value="#{msg['pages.signin.entrar']}" action="#{campeonatoManagedBean.salvar}"/>
        </h:form>
 </ui:define>
 </ui:composition>

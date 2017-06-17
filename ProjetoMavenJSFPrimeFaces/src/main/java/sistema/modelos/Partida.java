@@ -1,25 +1,47 @@
 package sistema.modelos;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Partida {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+
+public class Partida implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int PartidaID;
+	
+	@ManyToOne(targetEntity=Estadio.class,fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Estadio estadio;
-	// nao precisa mais //private String horario;
-	// nao precisa mais //private Time oponente1;
-	// nao precisa mais //private Time oponente2;
-	// nao precisa mais //private Time vencedor;
-	// nao precisa mais //private int oponente1Placar;
-	// nao precisa mais //private int oponente2Placar;
 	
-	//alteracoes glauco
 	private int numero;
+	@ManyToOne
 	private Inscricao equipeMandante;
+	@ManyToOne
 	private Inscricao equipeVisitante;
+	@Temporal(TemporalType.DATE)
 	private Date data;
+	
+	@OneToOne(targetEntity = Partida.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Partida proxPartida;
+	@OneToMany(targetEntity = Juiz.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private ArrayList<Juiz> juizes;
+	
+	@OneToOne(targetEntity = Grupo.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Grupo grupo;
 	private String relatoJuiz;
 	
@@ -79,43 +101,6 @@ public class Partida {
 		this.relatoJuiz = relatoJuiz;
 	}
 	
-	/*public String getHorario() {
-		return horario;
-	}
-	public void setHorario(String horario) {
-		this.horario = horario;
-	}
-	public Time getOponente1() {
-		return oponente1;
-	}
-	public void setOponente1(Time oponente1) {
-		this.oponente1 = oponente1;
-	}
-	public Time getOponente2() {
-		return oponente2;
-	}
-	public void setOponente2(Time oponente2) {
-		this.oponente2 = oponente2;
-	}
-	public Time getVencedor() {
-		return vencedor;
-	}
-	public void setVencedor(Time vencedor) {
-		this.vencedor = vencedor;
-	}
-	public int getOponente1Placar() {
-		return oponente1Placar;
-	}
-	public void setOponente1Placar(int oponente1Placar) {
-		this.oponente1Placar = oponente1Placar;
-	}
-	public int getOponente2Placar() {
-		return oponente2Placar;
-	}
-	public void setOponente2Placar(int oponente2Placar) {
-		this.oponente2Placar = oponente2Placar;
-	}*/
-	
-	
+		
 
 }
