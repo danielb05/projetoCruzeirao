@@ -2,12 +2,22 @@ package sistema.beans;
 
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
 import sistema.modelos.Time;
 import sistema.service.TimeService;
 
+@ManagedBean
+@ViewScoped
 public class TimeManagedBean {
 	
 	
+	private List<Time> Times;
+	public void setTimes(List<Time> times) {
+		Times = times;
+	}
+
 	private TimeService service = new TimeService();
 	private Time time = new Time();
 	
@@ -20,6 +30,9 @@ public class TimeManagedBean {
 	
 	public void salvar(){
 		service.salvar(time);
+		if(Times!=null)
+			Times.add(time);
+			
 		time = new Time();
 	}
 	

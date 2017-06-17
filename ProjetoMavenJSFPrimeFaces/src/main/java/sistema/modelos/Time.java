@@ -21,6 +21,12 @@ public class Time implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int TimeID;
 	
+	public int getTimeID() {
+		return TimeID;
+	}
+	public void setTimeID(int timeID) {
+		TimeID = timeID;
+	}
 	private String nomeTime;
 
 	@Temporal(TemporalType.DATE)

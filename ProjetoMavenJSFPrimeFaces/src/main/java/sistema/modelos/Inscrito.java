@@ -17,7 +17,7 @@ public class Inscrito implements Serializable{
 
 	private enum Tipo{
 		
-		T,J,JU,M,TRE,TEC
+		TIME, JOGADOR, JUIZ, MASSAGISTA, TREINADOR, TECNICO;
 	}
 	private static final long serialVersionUID = 1L;
 	@Id

@@ -1,25 +1,34 @@
 package sistema.service;
 import java.util.ArrayList;
+import java.util.List;
 
 import sistema.modelos.Rodada;
 
+import sistema.dao.RodadaDAO;
 public class RodadaService {
 	
-	private ArrayList<Rodada> rodadas = new ArrayList<Rodada>();
+private RodadaDAO RodadaDAO = new RodadaDAO();
 	
-	public RodadaService(){
-		
-		
-	}
-	
-	public void salvar(Rodada rodada){
-		rodadas.add(rodada);
+	public List<Rodada> getRodadas() {		
+		List <Rodada> Rodadas = RodadaDAO.getAll(Rodada.class);
+		RodadaDAO.closeEntityManager();
+		return Rodadas;
 	}
 
-	public ArrayList<Rodada> getRodadas() {
-		return rodadas;
+	public void salvar(Rodada Rodada) {
+		RodadaDAO.save(Rodada);
+		RodadaDAO.closeEntityManager();
 	}
-	
+
+	public void remover(Rodada Rodada) {
+		RodadaDAO.remove(Rodada);
+		RodadaDAO.closeEntityManager();
+	}
+
+	public void alterar(Rodada Rodada) {
+		RodadaDAO.save(Rodada);
+		RodadaDAO.closeEntityManager();
+	}
 	
 
 }

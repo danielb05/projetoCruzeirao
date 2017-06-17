@@ -16,7 +16,7 @@ import javax.persistence.OneToOne;
 public class Juiz implements Serializable{
 	
 	private enum Tipo{
-		J,B,A
+		JUIZ,BANDEIRINHA,ARBITRO
 	}
 	@OneToOne(targetEntity = Usuario.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 

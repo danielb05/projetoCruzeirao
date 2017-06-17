@@ -1,24 +1,53 @@
 package sistema.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import sistema.dao.PartidaDAO;
+import sistema.modelos.Gol;
 import sistema.modelos.Partida;
+import sistema.modelos.Time;
+
 
 public class PartidaService {
+	private PartidaDAO PartidaDAO = new PartidaDAO();
 	
-	private ArrayList<Partida> partidas = new ArrayList<Partida>();
+	public List<Partida> getPartidas() {		
+		List <Partida> Partidas = PartidaDAO.getAll(Partida.class);
+		PartidaDAO.closeEntityManager();
+		return Partidas;
+	}
 	
-
-	public PartidaService(){
-		
+	public List<Partida> getCategorias() {		
+		List <Partida> Partidas = PartidaDAO.getAll(Partida.class);
+		PartidaDAO.closeEntityManager();
+		return Partidas;
 	}
 
-	public ArrayList<Partida> getPartidas() {
-		return partidas;
+	public void salvar(Partida partida) {
+		PartidaDAO.save(partida);
+		PartidaDAO.closeEntityManager();
+	}
+
+	public void remover(Partida partida) {
+		PartidaDAO.remove(partida);
+		PartidaDAO.closeEntityManager();
+	}
+
+
+	public void alterar(Partida partida) {
+		PartidaDAO.save(partida);
+		PartidaDAO.closeEntityManager();
 	}
 	
-	public void salvar(Partida partida){
-		partidas.add(partida);
+	public Partida pesquisar(Partida partida) {
+
+		partida = PartidaDAO.getById(Partida.class, partida.getPartidaID());
+		PartidaDAO.closeEntityManager();
+		return partida;
 	}
+
+	
+	
 
 }

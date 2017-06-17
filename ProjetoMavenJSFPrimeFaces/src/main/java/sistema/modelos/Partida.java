@@ -25,6 +25,12 @@ public class Partida implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int PartidaID;
 	
+	public int getPartidaID() {
+		return PartidaID;
+	}
+	public void setPartidaID(int partidaID) {
+		PartidaID = partidaID;
+	}
 	@ManyToOne(targetEntity=Estadio.class,fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Estadio estadio;
 	
