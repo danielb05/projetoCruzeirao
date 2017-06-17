@@ -13,6 +13,10 @@
 		<class>sistema.modelos.Rodada</class>
 		<class>sistema.modelos.Time</class>
 		<class>sistema.modelos.Usuario</class>
+		<class>sistema.modelos.Cartao</class>
+		<class>sistema.modelos.Chaves</class>
+		<class>sistema.modelos.Gol</class>
+		<class>sistema.modelos.PartidaFutebol</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/DBCruzeiraoOficial;create=true"/>
 			<property name="javax.persistence.jdbc.user" value="user"/>
