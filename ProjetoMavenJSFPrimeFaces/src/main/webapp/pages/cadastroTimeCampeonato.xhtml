@@ -23,9 +23,9 @@
 		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
 		      
 		      
-		<p:outputLabel for="jogadores" value="#{msg['pages.cadastroTimeCampeonato.jogadores']}" />
+		<p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.jogadores']}" />
         <p:selectOneMenu id="jogadores" value="#{selectOneMenuView.jogadores}" style="width:125px">
-            <f:selectItem itemLabel="" itemValue="" />
+            <f:selectItem value="#{usuarioManagedBean.usuarios}" var="user" itemLabel="#{user.nome}" itemValue="#{user.UsuarioID}" />
         </p:selectOneMenu>
         
         

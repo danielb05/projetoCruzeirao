@@ -34,9 +34,9 @@
 		       <p:outputLabel value="#{msg['pages.signin.endereco']}" />
 		      <p:inputText value="#{usuarioManagedBean.usuario.endereco}"/> 
 		      
-		      <p:outputLabel value="#{msg['pages.cadastroUsuario.sexo']}" />
+		      <p:outputLabel value="#{msg['pages.signin.sexo']}" />
 		 		<p:selectOneMenu value="#{usuarioManagedBean.usuario.sexo}" required="true"> 
-            	<f:selectItem itemLabel="#{msg['pages.padrao.selecione']}" itemValue=""/>
+            	<f:selectItem itemLabel="#{msg['pages.signin.sexo']}" itemValue=""/>
             	<f:selectItem itemLabel="#{msg['pages.signin.sexo1']}" itemValue="M" />
             	<f:selectItem itemLabel="#{msg['pages.signin.sexo2']}" itemValue="F" />
             	</p:selectOneMenu>
@@ -50,6 +50,8 @@
 		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo4']}" itemValue="DRIVER" />
 		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo5']}" itemValue="CREF" />
 			  </p:selectOneMenu>   
+			  <p:outputLabel value="#{msg['pages.signin.documento']}" />
+		      <p:inputText value="#{usuarioManagedBean.usuario.documento}"/>
 		    
 	
 	  	</p:panelGrid>

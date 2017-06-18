@@ -17,21 +17,22 @@
 	  <h1><p:outputLabel value="#{msg['pages.listaUsuarios.titulo']}"/></h1>
 	  
 	  <h:form>	
-		     <p:dataTable value=""
-                var="aux">
+		     <p:dataTable value="#{usuarioManagedBean.usuarios}"
+                var="aux"
+                id="listaUsuarios">
    
 			      <p:column headerText="#{msg['pages.listaUsuarios.nome']}">
-			        <p:outputLabel value="" />
+			        <p:outputLabel value="#{aux.nome}" />
 			      </p:column>
 			      <p:column headerText="#{msg['pages.listaUsuarios.email']}">
-			        <p:outputLabel value="" />
+			        <p:outputLabel value="#{aux.email}" />
 			      </p:column>
 			      <p:column headerText="#{msg['pages.listaUsuarios.papel']}">
-			        <p:outputLabel value="" />
+			        <p:outputLabel value="#{aux.tipo}" />
 			      </p:column>
 			      <p:column headerText="#{msg['pages.listaUsuarios.mais']}">
-			        <p:outputLabel value="" />
-			      </p:column>
+					<p:commandButton value="#{msg['pages.listaUsuarios.mais']}" action="#"/>
+				</p:column>
 			      
 			 </p:dataTable>	
 	  

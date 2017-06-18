@@ -20,10 +20,12 @@
 	  <h:form>	
 		     <p:dataTable value="#{campeonatoManagedBean.campeonatos}"
                 var="aux"
-                id="tabelaCampeonatos">
-   >
+                id="tabelaCampeonatos"
+                
+                >
+                
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.nome']}">
-			        <p:outputLabel value="#{aux.nome}" />
+						<p:outputLabel value="#{aux.nome}" />
 			      </p:column>
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.dataIni']}">
 			        <p:outputLabel value="#{aux.inicioCampeonato}" />
@@ -31,15 +33,16 @@
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.dataFim']}">
 			        <p:outputLabel value="#{aux.fimCampeonato}" />
 			      </p:column>
-			      <p:column headerText="#{msg['pages.campeonatosAtivos.organizador']}">
+			      <!--  <p:column headerText="#{msg['pages.campeonatosAtivos.organizador']}">
 			        <p:outputLabel value="#{aux.organizador}" />
-			      </p:column>
+			      </p:column>-->
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.selecionar']}">
 					<p:commandButton value="#{msg['pages.campeonatosAtivos.selecionar']}" action="#"/>
 				</p:column>
 			      
 			   </p:dataTable>
-			   <p:commandButton value="#{msg['pages.campeonatosAtivos.selecionar']}" action="partidas.xhtml" text-align="center"/>	
+			   <!--<p:commandButton value="#{msg['pages.campeonatosAtivos.selecionar']}" action="partidas.xhtml" text-align="center"/>-->
+			   
 	  
        </h:form>
 </ui:define>

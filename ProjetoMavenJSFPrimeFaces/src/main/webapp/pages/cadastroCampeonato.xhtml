@@ -23,11 +23,17 @@
 		      <p:inputText value="#{campeonatoManagedBean.campeonato.nome}"/>
 
 			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.taxa']}" />
-<p:spinner id="prefix" value="#{campeonatoManagedBean.campeonato.taxa}" prefix="$" min="0" />
-		     
-		      
+			  <p:spinner id="prefix" value="#{campeonatoManagedBean.campeonato.taxa}" prefix="R$" min="0" />
+			  <p:outputLabel for="popup" value="#{msg['pages.cadastroCampeonato.dataIni']}" />
+        	  <p:calendar id="popup" value="#{campeonatoManagedBean.campeonato.inicioCampeonato}" />
+		      <p:outputLabel for="popup2" value="#{msg['pages.cadastroCampeonato.dataFim']}" />
+        	  <p:calendar id="popup2" value="#{campeonatoManagedBean.campeonato.fimCampeonato}" />
+		      <p:outputLabel for="popup3" value="#{msg['pages.cadastroCampeonato.inscriIni']}" />
+        	  <p:calendar id="popup3" value="#{campeonatoManagedBean.campeonato.inicioInscricao}" />
+        	  <p:outputLabel for="popup4" value="#{msg['pages.cadastroCampeonato.inscriFim']}" />
+        	  <p:calendar id="popup4" value="#{campeonatoManagedBean.campeonato.fimInscricao}" />
 	  	</p:panelGrid>
-	  <p:commandButton value="#{msg['pages.signin.entrar']}" action="#{campeonatoManagedBean.salvar}"/>
+	  <p:commandButton value="#{msg['pages.cadastroCampeonato.criar']}" action="#{campeonatoManagedBean.salvar}"/>
        </h:form>
 </ui:define>
 </ui:composition>

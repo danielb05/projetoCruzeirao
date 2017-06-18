@@ -25,32 +25,32 @@
 	  <p:outputLabel value="#{msg['pages.cadastroCategoria.ano']}" />
       <p:inputText value="#{categoriaManagedBean.categoria.anoMaximo}"/>
       
-      	  <p:outputLabel value="#{msg['pages.cadastroCategoria.genero']}" />
-      <p:inputText value="#{categoriaManagedBean.categoria.numero}"/>
-      
-      	  <p:outputLabel value="#{msg['pages.cadastroCategoria.qtdMinJogadores']}" />
+      	  <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.minjogador']}" />
       <p:spinner id="basic" value="#{categoriaManagedBean.categoria.qtdMinimaJogadores}" />
       
-      	  <p:outputLabel value="#{msg['pages.cadastroCategoria.qtdMaxJogadores']}" />
+      	  <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.maxjogador']}" />
       <p:spinner id="basic1" value="#{categoriaManagedBean.categoria.qtdMaximaJogadores}" />    
 
        
         
-          <p:outputLabel value="#{msg['pages.cadastroUsuario.sexo']}" />
+          <p:outputLabel value="#{msg['pages.signin.sexo']}" />
 		 		<p:selectOneMenu value="#{categoriaManagedBean.categoria.genero}" required="true"> 
-            	<f:selectItem itemLabel="#{msg['pages.padrao.selecione']}" itemValue=""/>
+            	<f:selectItem itemLabel="#{msg['pages.signin.sexo']}" itemValue=""/>
             	<f:selectItem itemLabel="#{msg['pages.signin.sexo1']}" itemValue="M" />
             	<f:selectItem itemLabel="#{msg['pages.signin.sexo2']}" itemValue="F" />
             	</p:selectOneMenu>
             	
-             <p:outputLabel value="#{msg['pages.cadastroUsuario.sexo']}" />	
+             <p:outputLabel value="#{msg['pages.comuns.menuLateral.campeonatos']}" />	
             	 <p:selectOneMenu id="console" value="#{categoriaManagedBean.categoria.campeonato}" style="width:125px">
             <f:selectItems value = "#{categoriaManagedBean.campeonatos}" var="camp" itemLabel="#{camp.nome}" itemValue="#{camp.campeonatoID}" />
         </p:selectOneMenu>
+      <!-- 
+      <p:outputLabel value="#{msg['pages.cadastroCategoria.genero']}" />
+      <p:inputText value="#{categoriaManagedBean.categoria.numero}"/> -->
       
 	  </p:panelGrid>
 	  <p></p>
-	  <p:commandButton value="#{msg['pages.cadastroCategoria.cadastrar']}" 
+	  <p:commandButton value="#{msg['pages.cadastroCategoria.title']}" 
 	                 action="#{categoriaManagedBean.salvar}"
 	                 />
        </h:form>
