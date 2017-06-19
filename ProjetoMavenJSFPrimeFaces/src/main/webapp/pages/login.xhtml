@@ -19,9 +19,12 @@
 	  <h:form>	
 	  <p:panelGrid columns="2" align="center">
       <p:outputLabel value="#{msg['pages.login.email']}" />
-      <p:inputText value="" type="email"/>
+      <p:inputText value="" type="email" id="email"/>
+      	
 	  <p:outputLabel value="#{msg['pages.login.senha']}"  />
-      <p:inputText value="" type="password"/>
+      <p:inputText value="" type="password" id="password"/>
+      	<!-- <p:watermark for="password" value="#{msg['pages.login.senha']}" /> -->
+      	<!-- <p:watermark for="email" value="#{msg['pages.login.email']}" /> -->
 	  </p:panelGrid>
 
 	  <p:commandButton value="#{msg['pages.login.entrar']}" action="telaInicialUsuario.xhtml"/>

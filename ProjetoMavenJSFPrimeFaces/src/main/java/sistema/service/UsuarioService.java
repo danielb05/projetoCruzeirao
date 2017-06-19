@@ -1,6 +1,5 @@
 package sistema.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import sistema.modelos.Usuario;
@@ -12,29 +11,28 @@ public class UsuarioService {
  	
 	public void salvar(Usuario usuario)
 	{
-		usuario = UsuarioDAO.save(usuario);
-		UsuarioDAO.closeEntityManager();
-		
+		UsuarioDAO.salvar(usuario);
+		UsuarioDAO.closeEntityManager();	
 		
 	}
 	
 	public List <Usuario> getUsuarios()
 	{
-		List <Usuario> list = UsuarioDAO.getAll(Usuario.class);
+		List <Usuario> list = (List<Usuario>) UsuarioDAO.getAll();
 		UsuarioDAO.closeEntityManager();
 		return list;
 	}
 
 	public void alterar(Usuario usuario) {
-		UsuarioDAO.save(usuario);
+		UsuarioDAO.salvar(usuario);
 		UsuarioDAO.closeEntityManager();
 	}
 
 	
 	public void remover(Usuario usuario) {
 		
-		usuario = UsuarioDAO.getById(Usuario.class, usuario.getIdUsuario());
-		UsuarioDAO.remove(usuario);
+		usuario = UsuarioDAO.getById((long) usuario.getIdUsuario());
+		UsuarioDAO.remover(usuario);
 		UsuarioDAO.closeEntityManager();
 	}
 

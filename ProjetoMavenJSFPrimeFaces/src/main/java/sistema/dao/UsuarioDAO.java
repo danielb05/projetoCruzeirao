@@ -3,11 +3,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import sistema.dao.generic.GenericDAO;
+import sistema.dao.generic.GenericoDAO;
 import sistema.modelos.Usuario;
 
-public class UsuarioDAO extends GenericDAO<Usuario,Integer> {
+public class UsuarioDAO extends GenericoDAO<Usuario> {
 
-	@Override
 	protected Class<Usuario> getClasseEntidade() {
 		// TODO Auto-generated method stub
 		return Usuario.class;
