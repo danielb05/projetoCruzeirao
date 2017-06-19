@@ -5,34 +5,48 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui2="http://java.sun.com/jsf/facelets"
->
-	
+	xmlns:c="http://java.sun.com/jstl/core">
+
+
 	<ui:define name="title">
 		<h:outputText value="#{msg['pages.login.title']}" />
 	</ui:define>
-	
+
+	<f:metadata>
+		<f:event listener="#{loginBean.preRender}" type="preRenderView" />
+	</f:metadata>
+
+	<p:growl id="messages" sticky="false" life="3000" for="mensagemGrowl"
+		autoUpdate="true" />
 
 	<ui:define name="principal">
-	  
-	  <h1><p:outputLabel value="Login"/></h1>
-	  
-	  <h:form>	
-	  <p:panelGrid columns="2" align="center">
-      <p:outputLabel value="#{msg['pages.login.email']}" />
-      <p:inputText value="" type="email" id="email"/>
-      	
-	  <p:outputLabel value="#{msg['pages.login.senha']}"  />
-      <p:inputText value="" type="password" id="password"/>
-      	<!-- <p:watermark for="password" value="#{msg['pages.login.senha']}" /> -->
-      	<!-- <p:watermark for="email" value="#{msg['pages.login.email']}" /> -->
-	  </p:panelGrid>
+		<div align="center">
+			<h1>
+				<p:outputLabel value="Login" />
+			</h1>
+			<h:form id="login" prependId="false">
+				<p:focus />
+				<h:panelGrid id="panel" style="margin:3%; text-align: center">
 
-	  <p:commandButton value="#{msg['pages.login.entrar']}" action="telaInicialUsuario.xhtml"/>
-		<a href="signin.xhtml"><p:outputLabel value="#{msg['pages.login.newUser']}"/></a>
-	  <!--  <h:commandLink  action="signin.xhtml" value="#{msg['pages.login.newUser']}" />-->
-	  <br/>
-	  
-       
-       </h:form>
-</ui:define>
+					<p:outputLabel value="#{msg['pages.login.email']}" />
+					<p:inputText type="text" id="username" autocomplete="off" size="30"
+						maxlength="80" label="Usuário">
+						<p:watermark for="username" value="#{msg['pages.login.email']}" />
+					</p:inputText>
+
+					<p:outputLabel value="#{msg['pages.login.senha']}" />
+					<p:password size="30" id="password" value="Senha:" maxlength="20">
+						<p:watermark for="password" value="#{msg['pages.login.senha']}" />
+					</p:password>
+
+					<p:commandButton value="Login" ajax="false"
+						style="width: 50%; max-width: 200px;" />
+				</h:panelGrid>
+
+
+				<a href="signin.xhtml"><p:outputLabel
+						value="#{msg['pages.login.newUser']}" /></a>
+			</h:form>
+			</div>
+	</ui:define>
 </ui:composition>
