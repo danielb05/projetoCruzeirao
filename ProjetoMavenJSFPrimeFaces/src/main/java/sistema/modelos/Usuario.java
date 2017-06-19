@@ -71,7 +71,7 @@ public class Usuario implements Serializable{
 	private String papel;
 	private String documento;
 
-	@ManyToMany(mappedBy="diretores",targetEntity=Time.class, fetch = FetchType.LAZY)
+	@ManyToMany(mappedBy="diretores",targetEntity=Time.class, fetch = FetchType.EAGER)
 	private ArrayList<Time> times;
 	
 	@OneToMany(targetEntity = Inscricao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)

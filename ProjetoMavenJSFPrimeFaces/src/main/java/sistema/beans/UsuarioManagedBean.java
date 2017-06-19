@@ -18,7 +18,7 @@ import sistema.service.UsuarioService;
 public class UsuarioManagedBean {
 	private Usuario usuario = new Usuario();
 	private UsuarioService service = new UsuarioService();
-	private List<Usuario> usuarios = new ArrayList<Usuario>();
+	private List<Usuario> usuarios;// = new ArrayList<Usuario>();
 	
 	// Editar
 	public void onRowEdit(RowEditEvent event) {

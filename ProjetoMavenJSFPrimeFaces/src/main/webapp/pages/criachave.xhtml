@@ -5,127 +5,203 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:ui2="http://java.sun.com/jsf/facelets"
->
-	
+	xmlns:ui2="http://java.sun.com/jsf/facelets">
+
 	<ui:define name="title">
 		<h:outputText value="#{msg['pages.comuns.menuLateral.listarchaves']}" />
 	</ui:define>
-	
+
 
 	<ui:define name="principal">
-	  
-	  <h1><p:outputLabel value="#{msg['pages.comuns.menuLateral.listarchaves']}"/></h1>
-	  
-	  <h:form>	
-	 
-	  <p:commandButton value="#{msg['pages.cadastrogrupo.title']}" action="#"/>
-	  
-	  <p></p>
-	  <p></p>
-	  
-	   <h1><p:outputLabel value="Groups"/></h1>
-	   
-	   <p></p>
-	   <p></p>
-	   
-	    <h2><p:outputLabel value="#{msg['pages.cadastrogrupo.grupoa']}"/></h2>
-	    
-     <p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml"/>
-<p></p>
 
-	   <p:panelGrid columns="3">
- 
-    <h:outputText value="#{msg['pages.cadastrogrupo.team1']}"/>
-     <h:outputText value=""/>
-          
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team2']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team3']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team4']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
-     
-      
- 
-</p:panelGrid>
+		<h1>
+			<p:outputLabel
+				value="#{msg['pages.comuns.menuLateral.listarchaves']}" />
+		</h1>
 
-	    <h2><p:outputLabel value="#{msg['pages.cadastrogrupo.grupob']}"/></h2>
-	    
-	         <p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml"/>
-<p></p>
-	   <p:panelGrid columns="3">
- 
-    <h:outputText value="#{msg['pages.cadastrogrupo.team5']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
+		<h:form>
 
- 
-          
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team6']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
+			<h1>
+				<p:outputLabel value="Groups" />
+			</h1>
 
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team7']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
+			<p></p>
+			<p></p>
 
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team8']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
+			<h2>
+				<p:outputLabel value="#{msg['pages.cadastrogrupo.grupoa']}" />
+			</h2>
 
-     
-      
- 
-</p:panelGrid>
+			<p:panelGrid columns="2">
 
-	    <h2><p:outputLabel value="#{msg['pages.cadastrogrupo.grupoc']}"/></h2>
-	    
-	         <p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml"/>
-<p></p>
-	   <p:panelGrid columns="3">
- 
-    <h:outputText value="#{msg['pages.cadastrogrupo.team9']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
+				<h:outputText value="#{msg['pages.cadastrogrupo.team1']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
 
- 
-          
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team10']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
 
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team11']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
+				<h:outputText value="#{msg['pages.cadastrogrupo.team2']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
 
-    
-    <h:outputText value="#{msg['pages.cadastrogrupo.team12']}"/>
-     <h:outputText value=""/>
-     <h:outputText value=""/>
+				<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml" />
+				<p></p>
+				
+			</p:panelGrid>
+				<h2>
+				<p:outputLabel value="#{msg['pages.cadastrogrupo.grupob']}" />
+			</h2>
 
-      
- 
-</p:panelGrid>
-	   
-	   
-	   	  
-	  
-	   
-	  
-       </h:form>
-</ui:define>
+			<p:panelGrid columns="2">
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team3']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team4']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+				<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml" />
+				<p></p>
+				
+			</p:panelGrid>
+
+<h2>
+				<p:outputLabel value="#{msg['pages.cadastrogrupo.grupoc']}" />
+			</h2>
+
+			<p:panelGrid columns="2">
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team5']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team6']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+				<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml" />
+				<p></p>
+				
+			</p:panelGrid>
+
+<h2>
+				<p:outputLabel value="#{msg['pages.cadastrogrupo.grupod']}" />
+			</h2>
+
+			<p:panelGrid columns="2">
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team7']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team8']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+				<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml" />
+				<p></p>
+				
+			</p:panelGrid>
+			<h2>
+				<p:outputLabel value="#{msg['pages.cadastrogrupo.grupoe']}" />
+			</h2>
+
+			<p:panelGrid columns="2">
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team9']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team10']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+				<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml" />
+				<p></p>
+				
+			</p:panelGrid>
+			<h2>
+				<p:outputLabel value="#{msg['pages.cadastrogrupo.grupof']}" />
+			</h2>
+
+			<p:panelGrid columns="2">
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team11']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team12']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+				<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml" />
+				<p></p>
+				
+			</p:panelGrid>
+			
+			<h2>
+				<p:outputLabel value="#{msg['pages.cadastrogrupo.grupog']}" />
+			</h2>
+
+			<p:panelGrid columns="2">
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team13']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team14']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+				<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml" />
+				<p></p>
+				
+			</p:panelGrid>
+			
+			<h2>
+				<p:outputLabel value="#{msg['pages.cadastrogrupo.grupoh']}" />
+			</h2>
+
+			<p:panelGrid columns="2">
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team15']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+
+				<h:outputText value="#{msg['pages.cadastrogrupo.team16']}" />
+				<p:selectOneMenu effect="fold" editable="true">
+            		<f:selectItems value="#{timeManagedBean.times}" var="time" itemLabel="#{time.nomeTime}"/>
+       			</p:selectOneMenu>
+
+				<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="listarChaveamento.xhtml" />
+				<p></p>
+				
+			</p:panelGrid>
+		</h:form>
+	</ui:define>
 </ui:composition>
 
 

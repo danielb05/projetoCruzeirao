@@ -24,13 +24,14 @@ public class CampeonatoManagedBean {
 	private CampeonatoService service = new CampeonatoService();
 	private CategoriaService CategoriaService = new CategoriaService();
 	
-	public void salvar(){
+	public String salvar(){
 		service.salvar(campeonato);
 		
 		if(campeonatos != null)
 			campeonatos.add(campeonato);
 		
 		campeonato = new Campeonato();
+		return"editarPerfil.xhtml";
 	}
 	
 	// Edição de um aluno na tabela
