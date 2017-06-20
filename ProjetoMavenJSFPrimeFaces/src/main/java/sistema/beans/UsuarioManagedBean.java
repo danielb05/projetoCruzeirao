@@ -17,6 +17,7 @@ public class UsuarioManagedBean {
 	private Usuario usuario = new Usuario();
 	private UsuarioService service = new UsuarioService();
 	private List<Usuario> usuarios;// = new ArrayList<Usuario>();
+	Usuario usuarioAtual;
 
 	// Editar
 	public void onRowEdit(RowEditEvent event) {
@@ -27,7 +28,7 @@ public class UsuarioManagedBean {
 
 	// Salvar
 	public String salvar() {
-		service.salvar(usuario);
+		usuarioAtual = service.salvar(usuario);
 
 		if (usuarios != null)
 			usuarios.add(usuario);
@@ -59,6 +60,14 @@ public class UsuarioManagedBean {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public Usuario getUsuarioAtual() {
+		return usuarioAtual;
+	}
+
+	public void setUsuarioAtual(Usuario usuarioAtual) {
+		this.usuarioAtual = usuarioAtual;
 	}
 
 }

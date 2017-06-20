@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import sistema.beans.UsuarioManagedBean;
 import sistema.dao.UsuarioDAO;
 import sistema.modelos.Usuario;
 
@@ -29,10 +30,11 @@ public class UsuarioSistemaService implements UserDetailsService {
 	public UserDetails loadUserByUsername(final String login) throws UsernameNotFoundException {
 		
 		UsuarioDAO usuarioService = new UsuarioDAO();
-				
+		
+		
 		//Pesquisar o usuário no banco
 		Usuario usuario = usuarioService.pesquisarPorEmail(login);
-		
+		//UsuarioManagedBean.setUsuarioAtual(usuario);
 		
 		if (usuario != null) {
 			return new UsuarioSistema(usuario, obtemGruposdoUsuario(usuario));
@@ -48,5 +50,5 @@ public class UsuarioSistemaService implements UserDetailsService {
 
 		return papeis;
 	}
-
+	
 }

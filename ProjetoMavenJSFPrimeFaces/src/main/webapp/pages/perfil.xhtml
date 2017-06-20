@@ -13,25 +13,26 @@
 	
 
 	<ui:define name="principal">
-	  
 	  <h1><p:outputLabel value="My Profile"/></h1>
 	  
+	  
 	  <h:form>	
+	  
 		  <p:panelGrid columns="2" align="center">
 		      <p:outputLabel value="#{msg['pages.signin.email']}" />
-		      <p:outputLabel value="" />
+		      <p:outputLabel value="#{usuarioManagedBean.usuarioAtual.email}" />
 			  <p:outputLabel value="#{msg['pages.signin.nome']}" />
-		      <p:outputLabel value="" />
+		      <p:outputLabel value="#{usuarioManagedBean.usuarioAtual.nome}" />
 		      <p:outputLabel value="#{msg['pages.perfil.tipo']}" />
-		      <p:outputLabel value="" />
+		      <p:outputLabel value="#{usuarioManagedBean.usuarioAtual.tipo}" />
 		      <p:outputLabel value="#{msg['pages.signin.dataNasc']}" />
-		      <p:outputLabel value="" />
+		      <p:outputLabel value="#{usuarioManagedBean.usuarioAtual.datanasc}" />
 			  <p:outputLabel value="#{msg['pages.signin.sexo']}" />
-		      <p:outputLabel value="" />
+		      <p:outputLabel value="#{usuarioManagedBean.usuarioAtual.sexo}" />
 		      <p:outputLabel value="#{msg['pages.signin.docTipo']}" />
-		      <p:outputLabel value="" />
+		      <p:outputLabel value="#{usuarioManagedBean.usuarioAtual.tipodocumento}" />
 		      <p:outputLabel value="#{msg['pages.signin.documento']}" />
-		      <p:outputLabel value="" />
+		      <p:outputLabel value="#{usuarioManagedBean.usuarioAtual.documento}" />
 	  	</p:panelGrid>
 	  	<p></p>
 	  <p:commandButton value="#{msg['pages.perfil.editar']}" action="editarPerfil.xhtml"/>
