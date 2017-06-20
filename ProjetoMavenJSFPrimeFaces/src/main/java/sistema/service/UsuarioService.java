@@ -9,11 +9,11 @@ public class UsuarioService {
 	
 	UsuarioDAO UsuarioDAO = new UsuarioDAO();
  	
-	public void salvar(Usuario usuario)
+	public Usuario salvar(Usuario usuario)
 	{
-		UsuarioDAO.salvar(usuario);
+		usuario=UsuarioDAO.save(usuario);
 		UsuarioDAO.closeEntityManager();	
-		
+		return usuario;
 	}
 	
 	public List <Usuario> getUsuarios()
@@ -23,16 +23,17 @@ public class UsuarioService {
 		return list;
 	}
 
-	public void alterar(Usuario usuario) {
-		UsuarioDAO.salvar(usuario);
+	public Usuario alterar(Usuario usuario) {
+		usuario=UsuarioDAO.save(usuario);
 		UsuarioDAO.closeEntityManager();
+		return usuario;
 	}
 
 	
 	public void remover(Usuario usuario) {
 		
 		usuario = UsuarioDAO.getById((long) usuario.getIdUsuario());
-		UsuarioDAO.remover(usuario);
+		UsuarioDAO.remove(usuario);
 		UsuarioDAO.closeEntityManager();
 	}
 

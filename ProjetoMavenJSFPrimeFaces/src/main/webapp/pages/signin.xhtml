@@ -4,58 +4,80 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:ui2="http://java.sun.com/jsf/facelets"
->
-	
+	xmlns:ui2="http://java.sun.com/jsf/facelets">
+
 	<ui:define name="title">
 		<h:outputText value="#{msg['pages.signin.title']}" />
 	</ui:define>
-	
+
 
 	<ui:define name="principal">
-	  
-	  <h1><p:outputLabel value="Sign In"/></h1>
-	  
-	  <h:form>	
-		  <p:panelGrid columns="2" align="center">
-		      <p:outputLabel value="#{msg['pages.signin.email']}" />
-		      <p:inputText value="#{usuarioManagedBean.usuario.email}"/>
-			  <p:outputLabel value="#{msg['pages.signin.senha']}" />
-		      <p:inputText value="#{usuarioManagedBean.usuario.senha}"/>
-		      <p:outputLabel value="#{msg['pages.signin.repetirSenha']}" />
-		      <p:inputText value="#{usuarioManagedBean.usuario.senha}"/>
-			  <p:outputLabel value="#{msg['pages.signin.nome']}" />
-		      <p:inputText value="#{usuarioManagedBean.usuario.nome}"/>
-		      		      
-		       <p:outputLabel value="#{msg['pages.signin.telefone']}" />
-		      <p:inputText value="#{usuarioManagedBean.usuario.telefoneFixo}"/>
-		       <p:outputLabel value="#{msg['pages.signin.celular']}" />
-		      <p:inputText value="#{usuarioManagedBean.usuario.telefoneMovel}"/>
-		       <p:outputLabel value="#{msg['pages.signin.endereco']}" />
-		      <p:inputText value="#{usuarioManagedBean.usuario.endereco}"/> 
-		      
-		      <p:outputLabel value="#{msg['pages.signin.sexo']}" />
-		 		<p:selectOneMenu value="#{usuarioManagedBean.usuario.sexo}" required="true"> 
-            	<f:selectItem itemLabel="#{msg['pages.signin.sexo']}" itemValue=""/>
-            	<f:selectItem itemLabel="#{msg['pages.signin.sexo1']}" itemValue="M" />
-            	<f:selectItem itemLabel="#{msg['pages.signin.sexo2']}" itemValue="F" />
-            	</p:selectOneMenu>
-            	
-            	<p:outputLabel value="#{msg['pages.signin.docTipo']}" />
-        	  <p:selectOneMenu value="#{usuarioManagedBean.usuario.tipodocumento}" required="true" style="width:125px">
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo']}" itemValue="" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo1']}" itemValue="CPF" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo2']}" itemValue="RG" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo3']}" itemValue="PASSAPORTE" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo4']}" itemValue="DRIVER" />
-		            <f:selectItem itemLabel="#{msg['pages.signin.docTipo5']}" itemValue="CREF" />
-			  </p:selectOneMenu>   
-			  <p:outputLabel value="#{msg['pages.signin.documento']}" />
-		      <p:inputText value="#{usuarioManagedBean.usuario.documento}"/>
-		    
-	
-	  	</p:panelGrid>
- <p:commandButton value="#{msg['pages.cadastroEstadio.criar']}" action="#{usuarioManagedBean.salvar}"/>
-        </h:form>
-</ui:define>
+
+		<h1>
+			<p:outputLabel value="Sign In" />
+		</h1>
+
+		<h:form>
+
+			<p:messages id="messages" showDetail="true" autoUpdate="true" />
+			<p:panelGrid columns="2" align="center" id="matchGrid">
+				<p:outputLabel value="#{msg['pages.signin.email']}" />
+				<p:inputText value="#{usuarioManagedBean.usuario.email}" />
+				<p:outputLabel value="#{msg['pages.signin.senha']}" />
+				<p:password id="pwd1" value="#{usuarioManagedBean.usuario.senha}"
+					match="pwd2" label="Password 1" required="true" feedback="true" />
+				<p:outputLabel value="#{msg['pages.signin.repetirSenha']}" />
+				<p:password id="pwd2" value="#{usuarioManagedBean.usuario.senha}"
+					label="Password 2" required="true" />
+				<p:outputLabel value="#{msg['pages.signin.nome']}" />
+				<p:inputText value="#{usuarioManagedBean.usuario.nome}" />
+
+				<p:outputLabel value="#{msg['pages.signin.telefone']}" />
+				<p:inputMask id="phone"
+					value="#{usuarioManagedBean.usuario.telefoneFixo}"
+					mask="(99) 9999-9999" />
+				<p:outputLabel value="#{msg['pages.signin.celular']}" />
+				<p:inputMask id="phone2"
+					value="#{usuarioManagedBean.usuario.telefoneMovel}"
+					mask="(99) 99999-9999" />
+				<p:outputLabel value="#{msg['pages.signin.endereco']}" />
+				<p:inputText value="#{usuarioManagedBean.usuario.endereco}" />
+
+				<p:outputLabel value="#{msg['pages.signin.sexo']}" />
+				<p:selectOneMenu label="#{msg['pages.signin.sexo']}"
+					value="#{usuarioManagedBean.usuario.sexo}" required="true">
+					<f:selectItem itemLabel="#{msg['pages.signin.sexo']}" itemValue="" />
+					<f:selectItem itemLabel="#{msg['pages.signin.sexo1']}"
+						itemValue="M" />
+					<f:selectItem itemLabel="#{msg['pages.signin.sexo2']}"
+						itemValue="F" />
+				</p:selectOneMenu>
+
+				<p:outputLabel value="#{msg['pages.signin.docTipo']}" />
+				<p:selectOneMenu label="#{msg['pages.signin.docTipo']}"
+					value="#{usuarioManagedBean.usuario.tipodocumento}" required="true"
+					style="width:125px">
+					<f:selectItem itemLabel="#{msg['pages.signin.docTipo']}"
+						itemValue="" />
+					<f:selectItem itemLabel="#{msg['pages.signin.docTipo1']}"
+						itemValue="CPF" />
+					<f:selectItem itemLabel="#{msg['pages.signin.docTipo2']}"
+						itemValue="RG" />
+					<f:selectItem itemLabel="#{msg['pages.signin.docTipo3']}"
+						itemValue="PASSAPORTE" />
+					<f:selectItem itemLabel="#{msg['pages.signin.docTipo4']}"
+						itemValue="DRIVER" />
+					<f:selectItem itemLabel="#{msg['pages.signin.docTipo5']}"
+						itemValue="CREF" />
+				</p:selectOneMenu>
+				<p:outputLabel value="#{msg['pages.signin.documento']}" />
+				<p:inputText value="#{usuarioManagedBean.usuario.documento}" />
+
+
+			</p:panelGrid>
+			<p:commandButton update="matchGrid"
+				value="#{msg['pages.cadastroEstadio.criar']}"
+				action="#{usuarioManagedBean.salvar}" />
+		</h:form>
+	</ui:define>
 </ui:composition>

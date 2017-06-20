@@ -16,8 +16,8 @@ public abstract class GenericDAO <T,I extends Serializable> {
 
 
 	private static EntityManagerFactory emf;
-	private EntityManager em;
-	private Class<T> classeEntidade;
+	protected EntityManager em;
+	protected Class<T> classeEntidade;
 	
 	public GenericDAO()
 	{
@@ -26,6 +26,7 @@ public abstract class GenericDAO <T,I extends Serializable> {
 		
 		emf = Persistence.createEntityManagerFactory(nomeProjeto);
 		
+		em = emf.createEntityManager();
 	}
 	
 	@PostConstruct
