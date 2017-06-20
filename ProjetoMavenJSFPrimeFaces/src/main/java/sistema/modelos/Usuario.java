@@ -34,6 +34,8 @@ public class Usuario implements Serializable{
 	private enum Tipo{
 		ADMIN,
 		ORG,
+		NORMAL,
+		JUIZ;
 		
 	};
 	public int getIdUsuario() {

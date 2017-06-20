@@ -55,7 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     	
     	//Logout
         http.logout().logoutUrl("/logout")
-                     .logoutSuccessUrl("/login.xhtml");
+                     .logoutSuccessUrl("/pages/login.xhtml");
 
         // Todas as requisições para partes internas da aplicação devem ser autenticadas
 		http.authorizeRequests().anyRequest().authenticated();
