@@ -23,6 +23,9 @@
       <p:column headerText="#{msg['pages.meusTimes.nome']}">
         <p:outputLabel value="#{aux.nomeTime}" />
       </p:column>
+      <p:column headerText="#{msg['pages.cadastroTimeCampeonato.title']}">
+					<p:commandButton value="#{msg['pages.cadastroTimeCampeonato.title']}" action="#{timeManagedBean.setTimeAtual(aux)}"/>
+	  </p:column>
       
    </p:dataTable>	
    <p></p>

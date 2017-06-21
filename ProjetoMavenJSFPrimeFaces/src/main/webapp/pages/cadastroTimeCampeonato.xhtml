@@ -20,13 +20,18 @@
 	  <h:form>	
 		  <p:panelGrid columns="2" align="center">
 		      <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.nome']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
+		      <p:inputText value="#{timeManagedBean.timeAtual.nomeTime}"/>
 		      
 		      
 		<p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.jogadores']}" />
-        <p:selectOneMenu id="jogadores" value="#{selectOneMenuView.jogadores}" style="width:125px">
-            <f:selectItem value="#{usuarioManagedBean.usuarios}" var="user" itemLabel="#{user.nome}" itemValue="#{user.UsuarioID}" />
-        </p:selectOneMenu>
+        <p:selectManyMenu value="#{usuarioManagedBean.usuarios}" 
+                          var="t" filter="true" filterMatchMode="contains" showCheckbox="true">
+            <f:selectItems value="#{usuarioManagedBean.usuarios}" var="user" itemLabel="#{user.nome}" itemValue="#{user}" />
+ 
+            <p:column>
+                <h:outputText value="#{t.nome}" />
+            </p:column>
+        </p:selectManyMenu>
         
         
         
@@ -59,17 +64,7 @@
         <p:selectOneMenu id="chave" value="#{selectOneMenuView.chave}" style="width:125px">
         <f:selectItem itemLabel="" itemValue="" />
         </p:selectOneMenu>
-        
-        
-        
-        
-
-			  <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.minjogador']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.nome}"/>
-		      
-		      <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.maxjogador']}" />
-		      <p:inputText value="#{alunoManagedBean.aluno.matricula}"/>
-		      		      
+     		      
 			 
 	  	</p:panelGrid>
 	  	<br></br>

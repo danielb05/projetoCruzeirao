@@ -92,9 +92,11 @@ public class CampeonatoManagedBean {
 		return campeonatoAtual;
 	}
 
-	public String setCampeonatoAtual(Campeonato campeonatoAtual) {
+	public String setCampeonatoAtual(Campeonato campeonatoAtual, int i) {
 		this.campeonatoAtual = campeonatoAtual;
+		if(i==1)
 		return"infoCampeonato.xhtml";
+		return"cadastroTimeCampeonato.xhtml";
 	}
 
 	

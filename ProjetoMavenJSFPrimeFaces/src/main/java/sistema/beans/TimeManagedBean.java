@@ -16,7 +16,7 @@ public class TimeManagedBean {
 	
 	private UsuarioService usuarioservice = new UsuarioService();
 	private List<Time> Times;
-	public static Time timeAtual=new Time();
+	private static Time timeAtual=new Time();
 	
 	public void setTimes(List<Time> times) {
 		Times = times;
@@ -32,7 +32,7 @@ public class TimeManagedBean {
 		this.time = time;
 	}
 	
-	public void salvar(Usuario usuario){
+	public String salvar(Usuario usuario){
 		service.salvar(time);
 		usuario.getTimes().add(time);
 		usuario = usuarioservice.alterar(usuario);
@@ -40,16 +40,18 @@ public class TimeManagedBean {
 			Times.add(time);
 			
 		time = new Time();
+		return"meusTimes.xhtml";
 	}
 	
 	public List<Time> getTimes(){
 		return service.getTimes();
 	}
-	public static Time getTimeAtual() {
+	public Time getTimeAtual() {
 		return timeAtual;
 	}
-	public static void setTimeAtual(Time timeAtual) {
+	public static String setTimeAtual(Time timeAtual) {
 		TimeManagedBean.timeAtual = timeAtual;
+		return "campeonatosPossiveis.xhtml";
 	}
 
 	
