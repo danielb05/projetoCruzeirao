@@ -36,7 +36,6 @@ public class InscritoManagedBean {
 			Inscritos.add(inscrito);
 		Inscrito = new Inscrito();
 		
-		
 	}
 	
 

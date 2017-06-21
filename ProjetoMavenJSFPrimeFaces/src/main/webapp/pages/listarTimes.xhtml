@@ -18,7 +18,7 @@
 	  <h1><p:outputLabel value="#{msg['pages.campeonatosAtivos.titulo']}"/></h1>
 	  
 	  <h:form>	
-		     <p:dataTable value="#{campeonatoManagedBean.campeonatos}"
+		     <p:dataTable value="#{timeManagedBean.times}"
                 var="aux"
                 id="tabelaCampeonatos"
                 
@@ -37,7 +37,7 @@
 			        <p:outputLabel value="#{aux.organizador}" />
 			      </p:column>-->
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.selecionar']}">
-					<p:commandButton value="#{msg['pages.campeonatosAtivos.selecionar']}" action="#"/>
+					<p:commandButton value="#{msg['pages.campeonatosAtivos.selecionar']}" action="cadastroTimeCampeonato.xhtml"/>
 				</p:column>
 			      
 			   </p:dataTable>

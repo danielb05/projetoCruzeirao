@@ -51,7 +51,7 @@ public class UsuarioManagedBean {
 
 		return usuarios;
 	}
-
+	
 	// Remover
 	public void remover(Usuario usuario) {
 		service.remover(usuario);

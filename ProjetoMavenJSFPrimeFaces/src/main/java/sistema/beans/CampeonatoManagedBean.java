@@ -13,6 +13,7 @@ import org.primefaces.event.RowEditEvent;
 
 import sistema.modelos.Campeonato;
 import sistema.modelos.Categoria;
+import sistema.modelos.Time;
 import sistema.service.CampeonatoService;
 
 @ManagedBean
@@ -23,6 +24,7 @@ public class CampeonatoManagedBean {
 	private List<Campeonato> campeonatos;
 	private CampeonatoService service = new CampeonatoService();
 	private CategoriaService CategoriaService = new CategoriaService();
+	private static Campeonato campeonatoAtual = new Campeonato();
 	
 	public String salvar(){
 		service.salvar(campeonato);
@@ -31,7 +33,7 @@ public class CampeonatoManagedBean {
 			campeonatos.add(campeonato);
 		
 		campeonato = new Campeonato();
-		return"editarPerfil.xhtml";
+		return"infoCampeonato.xhtml";
 	}
 	
 	// Edição de um aluno na tabela
@@ -66,6 +68,10 @@ public class CampeonatoManagedBean {
 		campeonatos.remove(campeonato);
 	}
 	
+	public void addTime(Time time)
+	{
+		
+	}
 	//Getters & Setters
 	public Campeonato getCampeonato() {
 		return campeonato;
@@ -81,6 +87,15 @@ public class CampeonatoManagedBean {
 	        //System.out.println(dataFormatada);
 	        return dataFormatada;
 	    }
+
+	public Campeonato getCampeonatoAtual() {
+		return campeonatoAtual;
+	}
+
+	public String setCampeonatoAtual(Campeonato campeonatoAtual) {
+		this.campeonatoAtual = campeonatoAtual;
+		return"infoCampeonato.xhtml";
+	}
 
 	
 }

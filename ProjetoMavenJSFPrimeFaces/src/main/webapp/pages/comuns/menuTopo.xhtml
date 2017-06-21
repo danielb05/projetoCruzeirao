@@ -9,6 +9,7 @@
     
  
     <p:menubar>
+    	<p:menuitem value="#{msg['pages.inicio.menu']}" url="inicio.xhtml" />
         <p:submenu label="#{msg['pages.comuns.menuTopo.campeonatos']}">
             <p:menuitem value="#{msg['pages.campeonatosAtivos.titulo']}" url="campeonatosAtivos.xhtml" />
             <p:menuitem value="#{msg['pages.campeonatosTerminados.titulo']}" url="campeonatosTerminados.xhtml" />
@@ -28,7 +29,6 @@
         </p:submenu>
  		<p:submenu rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG')}" label="#{msg['pages.comuns.menuLateral.usuarios']}" >
 				<p:menuitem value="#{msg['pages.comuns.menuLateral.listaUsuarios']}" url="listaUsuarios.xhtml" />
-				<p:menuitem value="#{msg['pages.comuns.menuLateral.addUsuario']}" url="signin.xhtml" />
 	       </p:submenu>
 	      <p:submenu rendered="#{request.isUserInRole('ADMIN')}" label="#{msg['pages.comuns.menuLateral.organizadores']}" >
 				<p:menuitem value="#{msg['pages.comuns.menuLateral.listaOrganizadores']}" url="listaUsuarios.xhtml" />

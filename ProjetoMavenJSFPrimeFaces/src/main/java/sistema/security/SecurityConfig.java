@@ -65,5 +65,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/resources/**");
 		web.ignoring().antMatchers("/javax.faces.resource/**");
+		web.ignoring().antMatchers("/pages/campeonatosAtivos.xhtml");
+		web.ignoring().antMatchers("/pages/campeonatosTerminados.xhtml");
+		web.ignoring().antMatchers("/pages/regulamento.xhtml");
+		web.ignoring().antMatchers("/pages/suporte.xhtml");
+		web.ignoring().antMatchers("/pages/linguagem.xhtml");
+		web.ignoring().antMatchers("/pages/infoCampeonato.xhtml");
 	}
 }

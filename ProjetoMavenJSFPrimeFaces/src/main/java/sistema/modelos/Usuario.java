@@ -31,7 +31,7 @@ public class Usuario implements Serializable{
 	public enum TipoDocumento{
 		RG,CPF,PASSAPORTE,DRIVER,CREF;
 	}
-	private enum Tipo{
+	public enum Tipo{
 		ADMIN,
 		ORG,
 		NORMAL,

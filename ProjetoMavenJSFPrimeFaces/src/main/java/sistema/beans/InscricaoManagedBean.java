@@ -59,9 +59,7 @@ public class InscricaoManagedBean {
 		Tecnico = new Inscrito();
 		Massagista = new Inscrito();
 		Diretor = new Inscrito();
-		Personal = new Inscrito();
-		
-		
+		Personal = new Inscrito();	
 	}
 	public List<Time> aceiteTimes(Usuario usuario){
 		ArrayList<Inscrito> inscricoesUsuario = new ArrayList<Inscrito>();
@@ -86,6 +84,11 @@ public class InscricaoManagedBean {
 
 	public void setJogadores(ArrayList<Inscrito> jogadores) {
 		Jogadores = jogadores;
+	}
+	
+	public void addJogador(Inscrito inscri)
+	{
+		Jogadores.add(inscri);
 	}
 	 
 }

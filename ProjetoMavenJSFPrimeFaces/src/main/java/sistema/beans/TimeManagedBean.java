@@ -16,6 +16,8 @@ public class TimeManagedBean {
 	
 	private UsuarioService usuarioservice = new UsuarioService();
 	private List<Time> Times;
+	public static Time timeAtual=new Time();
+	
 	public void setTimes(List<Time> times) {
 		Times = times;
 	}
@@ -42,6 +44,12 @@ public class TimeManagedBean {
 	
 	public List<Time> getTimes(){
 		return service.getTimes();
+	}
+	public static Time getTimeAtual() {
+		return timeAtual;
+	}
+	public static void setTimeAtual(Time timeAtual) {
+		TimeManagedBean.timeAtual = timeAtual;
 	}
 
 	
