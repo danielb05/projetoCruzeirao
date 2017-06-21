@@ -3,6 +3,8 @@ import sistema.service.CategoriaService;
 
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,6 +24,8 @@ public class CampeonatoManagedBean {
 	
 	private Campeonato campeonato = new Campeonato();
 	private List<Campeonato> campeonatos;
+	private List<Campeonato> campeonatosAtivos = new ArrayList<Campeonato>();
+	private List<Campeonato> campeonatosTerminados = new ArrayList<Campeonato>();
 	private CampeonatoService service = new CampeonatoService();
 	private CategoriaService CategoriaService = new CategoriaService();
 	private static Campeonato campeonatoAtual = new Campeonato();
@@ -97,6 +101,37 @@ public class CampeonatoManagedBean {
 		if(i==1)
 		return"infoCampeonato.xhtml";
 		return"cadastroTimeCampeonato.xhtml";
+	}
+
+	public List<Campeonato> getCampeonatosAtivos() {
+		Date localDate = new Date();
+		if(campeonatos == null)
+			campeonatos = service.getCampeonatos();
+		for (Campeonato c : campeonatos) {
+			if(c.getFimCampeonato().after(localDate))
+				campeonatosTerminados.add(c);
+		}
+		return campeonatosAtivos;
+	}
+
+	public void setCampeonatosAtivos(List<Campeonato> campeonatosAtivos) {
+		this.campeonatosAtivos = campeonatosAtivos;
+	}
+
+	public List<Campeonato> getCampeonatosTerminados() {
+		Date localDate = new Date();
+		if(campeonatos == null)
+			campeonatos = service.getCampeonatos();
+		for (Campeonato c : campeonatos) {
+			if(c.getFimCampeonato().before(localDate))
+				campeonatosTerminados.add(c);
+		}
+		return campeonatosTerminados;
+	}
+	
+
+	public void setCampeonatosTerminados(List<Campeonato> campeonatosTerminados) {
+		this.campeonatosTerminados = campeonatosTerminados;
 	}
 
 	

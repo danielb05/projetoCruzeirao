@@ -3,24 +3,24 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui"
-	lang="#{localeBean.language}"
-	>
+	xmlns:p="http://primefaces.org/ui" lang="#{localeBean.language}">
 
 <f:view locale="#{localeBean.locale}">
 	<h:head>
 
-		<style> .ui-datagrid-no-border .ui-datagrid-content { border: none; } 
-		#MenuPrincipal{
-		z-index: 4;
-		}
-		</style>
+		<style>
+.ui-datagrid-no-border .ui-datagrid-content {
+	border: none;
+}
 
-		<title>
-		   <ui:insert name="title">
+#MenuPrincipal {
+	z-index: 4;
+}
+</style>
+
+		<title><ui:insert name="title">
 				<h:outputLabel value="#{msg['pages.templateMenu.titleMainMenu']}" />
-			</ui:insert>
-	    </title>
+			</ui:insert></title>
 	</h:head>
 
 	<h:body>
@@ -40,51 +40,48 @@
 			</p:layoutUnit>-->
 
 
-	
 
 
 			<p:layoutUnit position="center">
 				<ui:insert name="principal" />
-<div align="center">
+				<div align="center">
 
-<p:panelGrid columns="1">
-				<p:graphicImage 
-					    library="sistema" 
-						name="imagens/Regulamento-Cruzeirão 2017-1.png"
-						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
-						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
-						width = "1050" height = "1490"/>
-						<p:graphicImage 
-					    library="sistema" 
-						name="imagens/Regulamento-Cruzeirão 2017-2.png"
-						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
-						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
-						width = "1050" height = "1490"/>
+					<p:panelGrid columns="1">
+						<p:graphicImage library="sistema"
+							name="imagens/Regulamento-Cruzeirão 2017-1.png"
+							alt="#{msg['pages.comuns.cabecalho.img.alt']}"
+							title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
+							width="1050" height="1490" />
+						<p:graphicImage library="sistema"
+							name="imagens/Regulamento-Cruzeirão 2017-2.png"
+							alt="#{msg['pages.comuns.cabecalho.img.alt']}"
+							title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
+							width="1050" height="1490" />
 						<div align="center">
-						<p:graphicImage
-						 library="sistema" 
-						name="imagens/prefeitura.png"
-						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
-						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
-						width = "150" height = "150"/>
+							<p:graphicImage library="sistema" name="imagens/prefeitura.png"
+								alt="#{msg['pages.comuns.cabecalho.img.alt']}"
+								title="#{msg['pages.comuns.cabecalho.img.title']}"
+								align="center" width="150" height="150" />
 						</div>
-						
-						 
-				</p:panelGrid>
+
+
+					</p:panelGrid>
 
 
 
-</div>
+				</div>
 
 
 
-				
+
 			</p:layoutUnit>
 		</p:layout>
 
 	</h:body>
 </f:view>
 </h:html>
+
+
 
 
 

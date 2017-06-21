@@ -1,0 +1,61 @@
+<ui:composition template="templateMenuUsuario.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="Register" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="Register Subscribed"/></h1>
+      
+	  <h:form>	
+		  <p:panelGrid columns="2" align="center">
+		      
+      		<p:outputLabel value="#{msg['pages.signin.email']}" />
+				<p:inputText value="#{usuarioManagedBean.usuarioAtual.email}" />
+      		
+      		<p:outputLabel value="#{msg['pages.signin.docTipo']}" />
+				<p:selectOneMenu label="#{msg['pages.signin.docTipo']}"
+					value="#{inscritoManagedBean.inscrito.tipo}" required="true"
+					style="width:125px">
+					<f:selectItem itemLabel="#{msg['pages.signin.docTipo']}"
+						itemValue="" />
+					<f:selectItem itemLabel="TEAM"
+						itemValue="TIME" />
+					<f:selectItem itemLabel="PLAYER"
+						itemValue="JOGADOR" />
+					<f:selectItem itemLabel="REFEREE"
+						itemValue="JUIZ" />
+					<f:selectItem itemLabel="MASSEUR"
+						itemValue="MASSAGISTA" />
+					<f:selectItem itemLabel="PERSONAL TRAINER"
+						itemValue="PERSONAL" />
+					<f:selectItem itemLabel="COACH"
+						itemValue="TECNICO" />
+						<f:selectItem itemLabel="DIRECTOR"
+						itemValue="DIRETOR" />		
+					
+					
+				</p:selectOneMenu>
+		      
+		      <p:outputLabel value="User Accept" />
+		      <h:selectBooleanCheckbox value="#{inscritoManagedBean.inscrito.aceiteUsuario}" />
+			
+			 <p:outputLabel value="Inscription Aceppt" />
+		      <h:selectBooleanCheckbox value="#{inscritoManagedBean.inscrito.inscricaoValidada}" />
+		
+        
+     </p:panelGrid>
+	  
+	  	<p:commandButton value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" action="#{inscritoManagedBean.salvar}"/>	  
+       	</h:form>
+</ui:define>
+</ui:composition>

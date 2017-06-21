@@ -49,7 +49,7 @@ public class InscricaoManagedBean {
 		Personal.setTipo(tipo.PERSONAL);
 		inscritos.add(Personal);
 		for(Inscrito i: inscritos){
-			inscritosMB.salvar(i);
+			//inscritosMB.salvar(i);
 		}
 		Inscricao.setInscritos(inscritos);
 		service.salvar(Inscricao);

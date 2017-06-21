@@ -41,7 +41,9 @@
    </p:dataTable>	
    <p></p>
    <h2><p:outputLabel value="#{msg['pages.infoCampeonato.locais']}" /></h2>
-   <p:dataTable value="">
+   <p:dataTable value="#{campeonatoManagedBean.campeonatoAtual.locais}"
+                var="aux"
+                id="tabelaLocais">
       <p:column headerText="#{msg['pages.infoCampeonato.estadio']}">
         <p:outputLabel value="" />
       </p:column>

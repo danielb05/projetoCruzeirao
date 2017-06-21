@@ -23,7 +23,6 @@
         <p:submenu rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG') or request.isUserInRole('NORMAL')}" label="#{msg['pages.comuns.menuTopo.times']}">
             <p:menuitem rendered="#{request.isUserInRole('NORMAL')}" value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" url="cadastroTime.xhtml" />
             <p:menuitem rendered="#{request.isUserInRole('NORMAL')}" value="#{msg['pages.comuns.menuTopo.meusTimes']}" url="meusTimes.xhtml"/>
-            <p:menuitem rendered="#{request.isUserInRole('NORMAL')}" value="#{msg['pages.comuns.menuTopo.entrarTime']}" url="aceiteEntrarTime.xhtml" />
             <p:menuitem rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG')}" value="#{msg['pages.comuns.menuLateral.listaTimes']}" url="listarTimes.xhtml" />
             <p:menuitem rendered="#{request.isUserInRole('ORG')}" value="#{msg['pages.aceite.tituloTime']}" url="aceiteTime.xhtml" />
         </p:submenu>
@@ -54,6 +53,7 @@
             <p:menuitem value="#{msg['pages.comuns.menuTopo.suporte']}" url="suporte.xhtml" />
             <p:menuitem value="#{msg['pages.linguagem.menu']}" url="linguagem.xhtml" />
         </p:submenu>
+        <p:menuitem value="Subscribe" url="inscrito.xhtml" />
 
 		
         <f:facet name="options">
