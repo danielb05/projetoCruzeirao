@@ -1,5 +1,6 @@
 package sistema.beans;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import sistema.modelos.Inscrito;
@@ -27,12 +28,12 @@ public class InscritoManagedBean {
 
 
 	private InscritoService service = new InscritoService();
-	private List<Inscrito> Inscritos;
-	public void salvar(){
+	private List<Inscrito> Inscritos = new ArrayList<Inscrito>();
+	public void salvar(Inscrito inscrito){
 		
-		service.salvar(Inscrito);
+		service.salvar(inscrito);
 		if(Inscritos!=null)
-			Inscritos.add(Inscrito);
+			Inscritos.add(inscrito);
 		Inscrito = new Inscrito();
 		
 		

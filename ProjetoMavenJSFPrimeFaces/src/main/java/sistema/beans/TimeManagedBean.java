@@ -6,13 +6,15 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 import sistema.modelos.Time;
+import sistema.modelos.Usuario;
 import sistema.service.TimeService;
+import sistema.service.UsuarioService;
 
 @ManagedBean
 @ViewScoped
 public class TimeManagedBean {
 	
-	
+	private UsuarioService usuarioservice = new UsuarioService();
 	private List<Time> Times;
 	public void setTimes(List<Time> times) {
 		Times = times;
@@ -28,8 +30,10 @@ public class TimeManagedBean {
 		this.time = time;
 	}
 	
-	public void salvar(){
+	public void salvar(Usuario usuario){
 		service.salvar(time);
+		usuario.getTimes().add(time);
+		usuario = usuarioservice.alterar(usuario);
 		if(Times!=null)
 			Times.add(time);
 			
@@ -39,6 +43,7 @@ public class TimeManagedBean {
 	public List<Time> getTimes(){
 		return service.getTimes();
 	}
+
 	
 	
 	

@@ -2,6 +2,7 @@ package sistema.modelos;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -82,6 +83,11 @@ public class Inscricao implements Serializable {
 	}
 	public void setValidada(boolean validada) {
 		this.validada = validada;
+	}
+	public boolean UsuarioInscritos(Usuario usuario, List<Inscrito> inscritos){
+		if(inscritos.contains(usuario))
+			return true;
+		return false;
 	}
 	
 

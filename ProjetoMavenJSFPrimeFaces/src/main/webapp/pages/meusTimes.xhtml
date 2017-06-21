@@ -16,12 +16,12 @@
 	  
 	  
 	<h2><p:outputLabel value="#{msg['pages.meusTimes.title']}" /></h2>
-   <p:dataTable value="#{timeService.getTimes}"
+   <p:dataTable value="#{usuarioManagedBean.usuarioAtual.times}"
    var="aux"
    id="tabelaTimes"
    >
       <p:column headerText="#{msg['pages.meusTimes.nome']}">
-        <p:outputLabel value="aux.nomeTime" />
+        <p:outputLabel value="#{aux.nomeTime}" />
       </p:column>
       
    </p:dataTable>	

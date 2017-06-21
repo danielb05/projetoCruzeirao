@@ -19,7 +19,7 @@
 	  <h3><p:outputLabel value="#{msg['pages.aceite.messageEntrarTime']}"/></h3>
 	  
 	  <h:form>	
-		     <p:dataTable value="#{timeManagedBean.times}"
+		     <p:dataTable value="#{inscricaoManagedBean.aceiteTimes(usuarioManagedBean.usuarioAtual)}"
                 var="aux"
                 id="tabelaAluno">
    >

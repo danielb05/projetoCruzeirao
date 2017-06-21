@@ -1,0 +1,75 @@
+
+<ui:composition template="templateMenuUsuario.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.cadastroTimeCampeonato.title']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.title']}"/></h1>
+      
+	  <h:form>	
+		  <p:panelGrid columns="2" align="center">
+		      <p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.nome']}" />
+		      <p:selectOneMenu id="console" value="#{inscricaoManagedBean.inscricao.time}" style="width:125px">
+            <f:selectItems value = "#{usuarioManagedBean.usuarioAtual.times}" var="time" itemLabel="#{time.nomeTime}" itemValue="#{time.timeID}" />
+        </p:selectOneMenu>
+<!-- 		      
+		      
+		<p:outputLabel value="#{msg['pages.cadastroTimeCampeonato.jogadores']}" />
+              <h:selectManyListbox value="#{inscricaoManagedBean.inscricao.inscritos}">
+   			<f:selectItems value="#{usuarioManagedBean.usuarios}" var="f"
+   			itemLabel="#{f.nome}" itemValue="#{f.usuarioID}" />
+   		</h:selectManyListbox> -->
+        
+        <p:outputLabel for="tecnico" value="#{msg['pages.cadastroTimeCampeonato.tecnico']}" />
+        <p:selectOneMenu id="console" value="#{inscricaoManagedBean.Tecnico}" style="width:125px">
+            <f:selectItems value = "#{usuarioManagedBean.usuarios}" var="usuario" itemLabel="#{usuario.nome}" itemValue="#{usuario.usuarioID}" />
+        </p:selectOneMenu>
+        
+        <p:outputLabel for="massagista" value="#{msg['pages.cadastroTimeCampeonato.massagista']}" />
+        <p:selectOneMenu id="console" value="#{inscricaoManagedBean.Massagista}" style="width:125px">
+            <f:selectItems value = "#{usuarioManagedBean.usuarios}" var="usuario" itemLabel="#{usuario.nome}" itemValue="#{usuario.usuarioID}" />
+        </p:selectOneMenu>
+        
+         <p:outputLabel for="ptrainer" value="#{msg['pages.cadastroTimeCampeonato.personaltrainer']}" />
+        <p:selectOneMenu id="console" value="#{inscricaoManagedBean.Personal}" style="width:125px">
+            <f:selectItems value = "#{usuarioManagedBean.usuarios}" var="usuario" itemLabel="#{usuario.nome}" itemValue="#{usuario.usuarioID}" />
+        </p:selectOneMenu>
+        
+        <p:outputLabel for="diretor" value="#{msg['pages.cadastroTimeCampeonato.diretor']}" />
+        <p:selectOneMenu id="console" value="#{inscricaoManagedBean.Diretor}" style="width:125px">
+            <f:selectItems value = "#{usuarioManagedBean.usuarios}" var="usuario" itemLabel="#{usuario.nome}" itemValue="#{usuario.usuarioID}" />
+        </p:selectOneMenu>
+        
+        <p:outputLabel for="categoria" value="#{msg['pages.cadastroTimeCampeonato.categoria']}" />
+        <p:selectOneMenu id="categoria" value="#{selectOneMenuView.categoria}" style="width:125px">
+        <f:selectItem itemLabel="" itemValue="" />
+        </p:selectOneMenu>
+        
+        <p:outputLabel for="chave" value="#{msg['pages.cadastroTimeCampeonato.chave']}" />
+        <p:selectOneMenu id="chave" value="#{selectOneMenuView.chave}" style="width:125px">
+        <f:selectItem itemLabel="" itemValue="" />
+        </p:selectOneMenu>      			 
+	  	</p:panelGrid>
+	  	<br></br>
+	  
+	  	<p:commandButton value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" action="timeCadastrado.xhtml"/>	  
+       	</h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+

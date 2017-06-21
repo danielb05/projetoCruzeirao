@@ -15,9 +15,9 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Inscrito implements Serializable{
 
-	private enum Tipo{
+	public enum Tipo{
 		
-		TIME, JOGADOR, JUIZ, MASSAGISTA, TREINADOR, TECNICO;
+		TIME, JOGADOR, JUIZ, MASSAGISTA, PERSONAL, TECNICO, DIRETOR;
 	}
 	private static final long serialVersionUID = 1L;
 	@Id
