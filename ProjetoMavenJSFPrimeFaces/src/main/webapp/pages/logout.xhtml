@@ -1,0 +1,21 @@
+<ui:composition template="templateLogOut.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.inicio.title']}" />
+	</ui:define>
+
+	<ui:define name="principal">
+	     <p:outputLabel value="Logout"/>
+	     <br></br>
+	     <br></br>
+	     <p:commandButton value="#{msg['pages.comuns.menuTopo.entrar']}" id="withIcon2"  icon="ui-icon-extlink" action="login.xhtml"/>     	
+	</ui:define>
+
+	
+</ui:composition>

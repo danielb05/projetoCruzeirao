@@ -1,4 +1,4 @@
-<ui:composition template="templateMenuUsuario.xhtml"
+<ui:composition template="templateLogOut.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
@@ -72,6 +72,19 @@
 				</p:selectOneMenu>
 				<p:outputLabel value="#{msg['pages.signin.documento']}" />
 				<p:inputText value="#{usuarioManagedBean.usuario.documento}" />
+				<p:outputLabel value="#{msg['pages.signin.userType']}" />
+				<p:selectOneMenu label="#{msg['pages.signin.userType']}"
+					value="#{usuarioManagedBean.usuario.tipo}" required="true"
+					style="width:125px">
+					<f:selectItem itemLabel="#{msg['pages.signin.userType']}"
+						itemValue="" />
+					<f:selectItem itemLabel="#{msg['pages.signin.userTipo2']}"
+						itemValue="ORG" />
+					<f:selectItem itemLabel="#{msg['pages.signin.userTipo3']}"
+						itemValue="NORMAL" />
+					<f:selectItem itemLabel="#{msg['pages.signin.userTipo4']}"
+						itemValue="JUIZ" />
+				</p:selectOneMenu>
 
 
 			</p:panelGrid>

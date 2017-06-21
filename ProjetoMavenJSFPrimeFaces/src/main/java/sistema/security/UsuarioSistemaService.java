@@ -34,7 +34,7 @@ public class UsuarioSistemaService implements UserDetailsService {
 		
 		//Pesquisar o usuário no banco
 		Usuario usuario = usuarioService.pesquisarPorEmail(login);
-		//UsuarioManagedBean.setUsuarioAtual(usuario);
+		UsuarioManagedBean.setUsuarioAtual(usuario);
 		
 		if (usuario != null) {
 			return new UsuarioSistema(usuario, obtemGruposdoUsuario(usuario));

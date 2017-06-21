@@ -79,6 +79,16 @@ public abstract class GenericDAO <T,I extends Serializable> {
 		em = null;
 	}
 	
+	public T update(T entity){
+		T ent = null;
+		
+		getEntityManager().getTransaction().begin();
+		ent = getEntityManager().merge(entity);
+		getEntityManager().getTransaction().commit();
+		
+		return ent;
+	}
+	
 	public T save(T entity)
 	{
 		

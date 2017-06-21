@@ -16,15 +16,18 @@ public class UsuarioService {
 		return usuario;
 	}
 	
+	
+	
 	public List <Usuario> getUsuarios()
 	{
-		List <Usuario> list = (List<Usuario>) UsuarioDAO.getAll();
-		UsuarioDAO.closeEntityManager();
-		return list;
+		//List <Usuario> list = (List<Usuario>) UsuarioDAO.getAll();
+		//UsuarioDAO.closeEntityManager();
+		return UsuarioDAO.GetUsers();
 	}
 
 	public Usuario alterar(Usuario usuario) {
-		usuario=UsuarioDAO.save(usuario);
+		//usuario=UsuarioDAO.save(usuario);
+		usuario = UsuarioDAO.update(usuario);
 		UsuarioDAO.closeEntityManager();
 		return usuario;
 	}

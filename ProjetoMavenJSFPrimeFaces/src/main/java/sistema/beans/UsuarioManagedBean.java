@@ -16,8 +16,8 @@ import sistema.service.UsuarioService;
 public class UsuarioManagedBean {
 	private Usuario usuario = new Usuario();
 	private UsuarioService service = new UsuarioService();
-	private List<Usuario> usuarios;// = new ArrayList<Usuario>();
-	Usuario usuarioAtual;
+	private List<Usuario> usuarios = new ArrayList<Usuario>();
+	public static Usuario usuarioAtual=new Usuario();
 
 	// Editar
 	public void onRowEdit(RowEditEvent event) {
@@ -29,18 +29,24 @@ public class UsuarioManagedBean {
 	// Salvar
 	public String salvar() {
 		usuarioAtual = service.salvar(usuario);
-
-		if (usuarios != null)
-			usuarios.add(usuario);
+		usuarioAtual = usuario;
+		//if (usuarios != null)
+			//usuarios.add(usuario);
 
 		usuario = new Usuario();
+		usuarios = service.getUsuarios();
 		return "perfil.xhtml";
 
+	}
+	
+	public String alterar(){
+		service.alterar(usuarioAtual);
+		return "perfil.xhtml";
 	}
 
 	// Retorna a lista para a tabela
 	public List<Usuario> getUsuarios() {
-		if (usuarios == null)
+		//if (usuarios == null)
 			usuarios = service.getUsuarios();
 
 		return usuarios;
@@ -66,8 +72,8 @@ public class UsuarioManagedBean {
 		return usuarioAtual;
 	}
 
-	public void setUsuarioAtual(Usuario usuarioAtual) {
-		this.usuarioAtual = usuarioAtual;
+	public static void setUsuarioAtual(Usuario user) {
+		usuarioAtual = user;
 	}
 
 }

@@ -23,30 +23,30 @@
 			<p:messages id="messages" showDetail="true" autoUpdate="true" />
 			<p:panelGrid columns="2" align="center" id="matchGrid">
 				<p:outputLabel value="#{msg['pages.signin.email']}" />
-				<p:inputText value="#{usuarioManagedBean.usuario.email}" />
+				<p:inputText value="#{usuarioManagedBean.usuarioAtual.email}" />
 				<p:outputLabel value="#{msg['pages.signin.senha']}" />
-				<p:password id="pwd1" value="#{usuarioManagedBean.usuario.senha}"
+				<p:password id="pwd1" value="#{usuarioManagedBean.usuarioAtual.senha}"
 					match="pwd2" label="Password 1" required="true" feedback="true" />
 				<p:outputLabel value="#{msg['pages.signin.repetirSenha']}" />
-				<p:password id="pwd2" value="#{usuarioManagedBean.usuario.senha}"
+				<p:password id="pwd2" value="#{usuarioManagedBean.usuarioAtual.senha}"
 					label="Password 2" required="true" />
 				<p:outputLabel value="#{msg['pages.signin.nome']}" />
-				<p:inputText value="#{usuarioManagedBean.usuario.nome}" />
+				<p:inputText value="#{usuarioManagedBean.usuarioAtual.nome}" />
 
 				<p:outputLabel value="#{msg['pages.signin.telefone']}" />
 				<p:inputMask id="phone"
-					value="#{usuarioManagedBean.usuario.telefoneFixo}"
+					value="#{usuarioManagedBean.usuarioAtual.telefoneFixo}"
 					mask="(99) 9999-9999" />
 				<p:outputLabel value="#{msg['pages.signin.celular']}" />
 				<p:inputMask id="phone2"
-					value="#{usuarioManagedBean.usuario.telefoneMovel}"
+					value="#{usuarioManagedBean.usuarioAtual.telefoneMovel}"
 					mask="(99) 99999-9999" />
 				<p:outputLabel value="#{msg['pages.signin.endereco']}" />
-				<p:inputText value="#{usuarioManagedBean.usuario.endereco}" />
+				<p:inputText value="#{usuarioManagedBean.usuarioAtual.endereco}" />
 
 				<p:outputLabel value="#{msg['pages.signin.sexo']}" />
 				<p:selectOneMenu label="#{msg['pages.signin.sexo']}"
-					value="#{usuarioManagedBean.usuario.sexo}" required="true">
+					value="#{usuarioManagedBean.usuarioAtual.sexo}" required="true">
 					<f:selectItem itemLabel="#{msg['pages.signin.sexo']}" itemValue="" />
 					<f:selectItem itemLabel="#{msg['pages.signin.sexo1']}"
 						itemValue="M" />
@@ -56,7 +56,7 @@
 
 				<p:outputLabel value="#{msg['pages.signin.docTipo']}" />
 				<p:selectOneMenu label="#{msg['pages.signin.docTipo']}"
-					value="#{usuarioManagedBean.usuario.tipodocumento}" required="true"
+					value="#{usuarioManagedBean.usuarioAtual.tipodocumento}" required="true"
 					style="width:125px">
 					<f:selectItem itemLabel="#{msg['pages.signin.docTipo']}"
 						itemValue="" />
@@ -72,11 +72,11 @@
 						itemValue="CREF" />
 				</p:selectOneMenu>
 				<p:outputLabel value="#{msg['pages.signin.documento']}" />
-				<p:inputText value="#{usuarioManagedBean.usuario.documento}" />
+				<p:inputText value="#{usuarioManagedBean.usuarioAtual.documento}" />
 				
 				<p:outputLabel value="#{msg['pages.signin.userType']}" />
 				<p:selectOneMenu label="#{msg['pages.signin.userType']}"
-					value="#{usuarioManagedBean.usuario.tipo}" required="true"
+					value="#{usuarioManagedBean.usuarioAtual.tipo}" required="true"
 					style="width:125px">
 					<f:selectItem itemLabel="#{msg['pages.signin.userType']}"
 						itemValue="" />
@@ -93,7 +93,7 @@
 			<p:commandButton type="button" onclick="javascript:history.back()" value="#{msg['pages.editarPerfil.descartar']}"/>
 			<p:commandButton update="matchGrid"
 				value="#{msg['pages.cadastroEstadio.criar']}"
-				action="#{usuarioManagedBean.salvar}" />
+				action="#{usuarioManagedBean.alterar}" />
 			
 		</h:form>
 	</ui:define>

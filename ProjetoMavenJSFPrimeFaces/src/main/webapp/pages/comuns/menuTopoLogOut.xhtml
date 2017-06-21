@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form>  
+    <p:growl id="messages"/>
+    
+    
+ 
+    <p:menubar>
+        <p:submenu label="#{msg['pages.comuns.menuTopo.campeonatos']}">
+            <p:menuitem value="#{msg['pages.campeonatosAtivos.titulo']}" url="campeonatosAtivos.xhtml" />
+            <p:menuitem value="#{msg['pages.campeonatosTerminados.titulo']}" url="campeonatosTerminados.xhtml" />
+            <p:menuitem rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG')}" value="#{msg['pages.comuns.menuTopo.cadastrarCamp']}" url="cadastroCampeonato.xhtml" />
+        </p:submenu>
+        
+        <p:submenu label="#{msg['pages.comuns.menuTopo.ajuda']}">
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.sobre']}" url="regulamento.xhtml" />
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.suporte']}" url="suporte.xhtml" />
+            <p:menuitem value="#{msg['pages.linguagem.menu']}" url="linguagem.xhtml" />
+        </p:submenu>
+
+    </p:menubar>
+    
+     <div align="center">
+     <p:graphicImage 
+					    library="sistema" 
+						name="imagens/cruzp4.png"
+						alt="#{msg['pages.comuns.cabecalho.img.alt']}" 
+						title="#{msg['pages.comuns.cabecalho.img.title']}" align="center"
+						/>
+    </div>
+    
+   
+</h:form>
+</ui:composition>
+

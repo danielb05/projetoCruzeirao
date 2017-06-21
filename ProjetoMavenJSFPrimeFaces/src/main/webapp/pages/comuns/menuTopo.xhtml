@@ -14,6 +14,10 @@
             <p:menuitem value="#{msg['pages.campeonatosTerminados.titulo']}" url="campeonatosTerminados.xhtml" />
             <p:menuitem rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG')}" value="#{msg['pages.comuns.menuTopo.cadastrarCamp']}" url="cadastroCampeonato.xhtml" />
         </p:submenu>
+        
+        <p:submenu rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG') or request.isUserInRole('NORMAL')} or request.isUserInRole('JUIZ')}" label="#{msg['pages.comuns.menuTopo.perfil']}">
+            <p:menuitem value="#{msg['pages.comuns.menuTopo.perfil']}" url="perfil.xhtml" />
+        </p:submenu>
  
         <p:submenu rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG') or request.isUserInRole('NORMAL')}" label="#{msg['pages.comuns.menuTopo.times']}">
             <p:menuitem rendered="#{request.isUserInRole('NORMAL')}" value="#{msg['pages.comuns.menuTopo.cadastrarTime']}" url="cadastroTime.xhtml" />
@@ -44,17 +48,17 @@
 			  
 			</p:submenu>
         
-        <p:menuitem rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG') or request.isUserInRole('NORMAL')}" value="#{msg['pages.comuns.menuTopo.perfil']}" url="perfil.xhtml" />
+        <p:menuitem rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG') or request.isUserInRole('NORMAL') or request.isUserInRole('null') or request.isUserInRole('JUIZ')}" value="#{msg['pages.comuns.menuTopo.perfil']}" url="perfil.xhtml" />
         <p:submenu label="#{msg['pages.comuns.menuTopo.ajuda']}">
             <p:menuitem value="#{msg['pages.comuns.menuTopo.sobre']}" url="regulamento.xhtml" />
             <p:menuitem value="#{msg['pages.comuns.menuTopo.suporte']}" url="suporte.xhtml" />
             <p:menuitem value="#{msg['pages.linguagem.menu']}" url="linguagem.xhtml" />
         </p:submenu>
- <p:menuitem rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('ORG') or request.isUserInRole('NORMAL')}" value="#{msg['pages.comuns.menuTopo.sair']}" url="paginaInicial.xhtml" />
 
+		
         <f:facet name="options">
-            <p:commandButton value="#{msg['pages.comuns.menuTopo.entrar']}" id="withIcon"  icon="ui-icon-extlink" action="login.xhtml"/>
-        </f:facet>
+            <p:commandButton rendered="#{request.isUserInRole('ADMIN') or request.isUserInRole('JUIZ') or request.isUserInRole('ORG') or request.isUserInRole('NORMAL') or request.isUserInRole('null')}" value="#{msg['pages.comuns.menuTopo.sair']}" icon="ui-icon-extlink" action="logout.xhtml" />
+         </f:facet>
     </p:menubar>
     
      <div align="center">
