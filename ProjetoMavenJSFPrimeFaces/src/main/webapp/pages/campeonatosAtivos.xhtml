@@ -39,6 +39,9 @@
 			      <p:column headerText="#{msg['pages.campeonatosAtivos.selecionar']}">
 					<p:commandButton value="#{msg['pages.campeonatosAtivos.selecionar']}" action="#{campeonatoManagedBean.setCampeonatoAtual(aux,1)}"/>
 				</p:column>
+				<p:column headerText="#{msg['pages.comuns.menuTopo.editar']}">
+					<p:commandButton value="#{msg['pages.comuns.menuTopo.editar']}" action="#{campeonatoManagedBean.setCampeonatoAtual(aux,3)}"/>
+				</p:column>
 			      
 			   </p:dataTable>
 			   <!--<p:commandButton value="#{msg['pages.campeonatosAtivos.selecionar']}" action="partidas.xhtml" text-align="center"/>-->

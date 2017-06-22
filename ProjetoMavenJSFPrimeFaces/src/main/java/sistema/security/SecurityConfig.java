@@ -70,6 +70,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		web.ignoring().antMatchers("/pages/regulamento.xhtml");
 		web.ignoring().antMatchers("/pages/suporte.xhtml");
 		web.ignoring().antMatchers("/pages/linguagem.xhtml");
-		web.ignoring().antMatchers("/pages/cadastroTimeCampeonato.xhtml");
 	}
 }

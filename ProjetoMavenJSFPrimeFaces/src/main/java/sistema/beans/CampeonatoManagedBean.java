@@ -100,6 +100,8 @@ public class CampeonatoManagedBean {
 		this.campeonatoAtual = campeonatoAtual;
 		if(i==1)
 		return"infoCampeonato.xhtml";
+		if(i==3)
+			return"editarCampeonato.xhtml";
 		return"cadastroTimeCampeonato.xhtml";
 	}
 

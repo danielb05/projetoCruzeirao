@@ -1,0 +1,46 @@
+
+<ui:composition template="templateMenuUsuario.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+>
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.cadastroCampeonato.titulo']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	  
+	  <h1><p:outputLabel value="#{msg['pages.cadastroCampeonato.titulo']}"/></h1>
+	  
+	  <h:form>	
+		  <p:panelGrid columns="2" align="center">
+		      <p:outputLabel value="#{msg['pages.cadastroCampeonato.nome']}" />
+		      <p:inputText value="#{campeonatoManagedBean.campeonatoAtual.nome}"/>
+
+			  <p:outputLabel value="#{msg['pages.cadastroCampeonato.taxa']}" />
+			  <p:spinner id="prefix" value="#{campeonatoManagedBean.campeonatoAtual.taxa}" prefix="R$" min="0" />
+			  <p:outputLabel for="popup" value="#{msg['pages.cadastroCampeonato.dataIni']}" />
+        	  <p:calendar id="popup" value="#{campeonatoManagedBean.campeonatoAtual.inicioCampeonato}" />
+		      <p:outputLabel for="popup2" value="#{msg['pages.cadastroCampeonato.dataFim']}" />
+        	  <p:calendar id="popup2" value="#{campeonatoManagedBean.campeonatoAtual.fimCampeonato}" />
+		      <p:outputLabel for="popup3" value="#{msg['pages.cadastroCampeonato.inscriIni']}" />
+        	  <p:calendar id="popup3" value="#{campeonatoManagedBean.campeonatoAtual.inicioInscricao}" />
+        	  <p:outputLabel for="popup4" value="#{msg['pages.cadastroCampeonato.inscriFim']}" />
+        	  <p:calendar id="popup4" value="#{campeonatoManagedBean.campeonatoAtual.fimInscricao}" />
+	  	</p:panelGrid>
+	  <p:commandButton value="#{msg['pages.cadastroCampeonato.criar']}" action="#{campeonatoManagedBean.salvar}"/>
+	  <p:commandButton type="button" onclick="javascript:history.back()" value="#{msg['pages.editarPerfil.descartar']}"/>
+       </h:form>
+</ui:define>
+</ui:composition>
+
+
+
+
+
+
